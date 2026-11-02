@@ -1,0 +1,57 @@
+{
+  "selection": "Provisional ground-truth oracle-selected gallery cases; not ordinary test-time selection",
+  "cases": [
+    {
+      "task": "nvs",
+      "case_id": "sample-0",
+      "source": "nvs/dl3dv20__ncf2/sample_00000",
+      "selected_by": "Ground-truth PSNR",
+      "display": "Two provisional cases are included while the final website results are being selected.",
+      "preparation_summary": "Copied prediction/reference and synchronized hstack comparison"
+    },
+    {
+      "task": "nvs",
+      "case_id": "sample-1",
+      "source": "nvs/dl3dv20__ncf2/sample_00001",
+      "selected_by": "Ground-truth PSNR",
+      "display": "Two provisional cases are included while the final website results are being selected.",
+      "preparation_summary": "See nvs-scene1-provenance.json"
+    },
+    {
+      "task": "depth",
+      "case_id": "scene-0",
+      "source": "depth/scannetpp__dense/scene_0",
+      "selected_by": "Ground-truth abs_rel",
+      "display": "Prediction and reference colors use separate display scales; this is a visual preview, not a quantitative comparison.",
+      "preparation_summary": "See sync-provenance.json"
+    },
+    {
+      "task": "depth",
+      "case_id": "scene-1",
+      "source": "depth/scannetpp__dense/scene_1",
+      "selected_by": "Ground-truth abs_rel",
+      "display": "Prediction and reference colors use separate display scales; this is a visual preview, not a quantitative comparison.",
+      "preparation_summary": "See scene1-sync-provenance.json"
+    },
+    {
+      "task": "camera",
+      "case_id": "scene-0",
+      "source": "pose/scannetpp__dense/scene_0",
+      "selected_by": "Ground-truth camera ATE",
+      "display": "One global rotation, translation, and scale alignment to GT is applied to every UGG camera. Frusta indicate orientation using a common glyph size.",
+      "preparation_summary": "See sync-provenance.json"
+    },
+    {
+      "task": "camera",
+      "case_id": "scene-1",
+      "source": "pose/scannetpp__dense/scene_1",
+      "selected_by": "Ground-truth camera ATE",
+      "display": "One global rotation, translation, and scale alignment to GT is applied to every UGG camera. Frusta indicate orientation using a common glyph size.",
+      "preparation_summary": "See scene1-sync-provenance.json"
+    }
+  ],
+  "placeholders": [
+    "3D reconstruction",
+    "4D generation"
+  ]
+}

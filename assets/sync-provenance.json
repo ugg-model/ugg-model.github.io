@@ -1,0 +1,34 @@
+{
+  "frame_count": 50,
+  "fps": 6.0,
+  "rgb_source": "rescued evaluation/depthpose/scannetpp/sample_00000/gt_rgb.mp4",
+  "frame_correspondence": "Verified all-frame relative GT rotations and normalized camera centers; depth and camera GT poses identical.",
+  "depth_clock": "Depth and input RGB packed into a single video frame for synchronized canvas rendering.",
+  "camera_alignment": {
+    "type": "One global Sim(3), fitted to all corresponding camera centers.",
+    "scale": 0.03655213654503767,
+    "rotation": [
+      [
+        0.9775224012969779,
+        0.2102858964005652,
+        0.015159048043984118
+      ],
+      [
+        -0.21015791227151132,
+        0.9776202230535235,
+        -0.009609962875017251
+      ],
+      [
+        -0.016840631587588,
+        0.0062081600970142585,
+        0.9998389129634538
+      ]
+    ],
+    "translation": [
+      -0.019162014473634206,
+      -0.034303462160756304,
+      0.0578549238548407
+    ]
+  },
+  "frustum_display": "Fixed-size orientation glyphs, not calibrated field-of-view visualization."
+}

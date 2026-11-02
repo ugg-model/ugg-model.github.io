@@ -1,0 +1,24 @@
+{
+ "reviewed": "2026-10-20, contact sheet of all 24 rendered in the real client",
+ "keep": [
+  "7scenes-chess-seq-05", "7scenes-heads-seq-01", "7scenes-office-seq-09",
+  "bonn-person-tracking2", "bonn-balloon2", "bonn-crowd2",
+  "kitti-drive-0095", "kitti-drive-0026", "kitti-drive-0016", "kitti-drive-0047",
+  "scannetpp-scene-44", "scannetpp-scene-3"
+ ],
+ "drop": {
+  "7scenes-office-seq-06": "dark, reads as a flat red wall",
+  "7scenes-stairs-seq-04": "mostly black",
+  "scannetpp-scene-32": "edge-on slab",
+  "scannetpp-scene-11": "edge-on, dark",
+  "scannetpp-scene-19": "cluttered, no readable structure",
+  "scannetpp-scene-9": "large black unobserved region",
+  "scannetpp-scene-36": "small fragment of a scene",
+  "scannetpp-scene-20": "black dominates the frame",
+  "scannetpp-scene-18": "black dominates the frame",
+  "sintel-sleeping-2": "dark and fragmented",
+  "sintel-sleeping-1": "dark and fragmented",
+  "sintel-alley-2": "thin sliver, no readable structure"
+ },
+ "note": "Author review of the rendered clouds, not of the metrics. Good AbsRel does not imply a good gallery tile: every scene dropped here passed its numeric gate."
+}

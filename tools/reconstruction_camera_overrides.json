@@ -1,0 +1,23 @@
+{
+ "_note": "Per-case framing overrides for frame_reconstruction_cameras.py. KITTI is a road corridor ~60 m deep. A hard off-axis view turns it into a sliver and a near-axial one strands it at the far end of the frame, so keep a moderate 3/4 and move in: its points are concentrated near the road while a few far ones set the 98th-percentile angle, so the shared distance target leaves it small. Its recordings are also built with --no-path.",
+ "kitti-drive-0095": {
+  "yaw": 30,
+  "pitch": 24,
+  "fit": 1.6
+ },
+ "kitti-drive-0026": {
+  "yaw": 30,
+  "pitch": 24,
+  "fit": 1.6
+ },
+ "kitti-drive-0016": {
+  "yaw": 30,
+  "pitch": 24,
+  "fit": 1.6
+ },
+ "kitti-drive-0047": {
+  "yaw": 30,
+  "pitch": 24,
+  "fit": 1.6
+ }
+}

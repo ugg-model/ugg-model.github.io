@@ -1,0 +1,2 @@
+/* Keep changing thumbnails and previews from becoming browser scroll anchors. */
+.review-app .case-grid,.review-app .inspector{overflow-anchor:none}

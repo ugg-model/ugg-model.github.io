@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {freshState,restoreState,setSelected,makeExport} from './state.mjs';
+const manifest=JSON.parse(fs.readFileSync(new URL('../examples.json',import.meta.url)));
+const config=JSON.parse(fs.readFileSync(new URL('./config.json',import.meta.url)));
+const before=JSON.stringify(manifest), state=freshState(manifest,config.defaults);
+assert.deepEqual(['nvs','depth','camera'].map(t=>manifest[t].cases.length),[72,72,66]);
+assert.deepEqual(Object.values(state.tasks).map(t=>t.selected.length),[24,24,24]);
+assert.equal(config.prior_camera_exclusions.length,23);
+assert.equal(new Set(config.prior_camera_exclusions).size,23);
+assert.equal(config.provisional_camera.length,9);
+for(const id of config.prior_camera_exclusions)assert(!state.tasks.camera.selected.includes(id));
+for(const id of config.provisional_camera)assert(state.tasks.camera.selected.includes(id));
+assert.equal(state.tasks.camera.selected.filter(id=>!config.provisional_camera.includes(id)).length,15);
+const copy=structuredClone(state);
+setSelected(copy,'camera','scannetpp-scene_44',true);
+setSelected(copy,'camera','scannetpp-scene_44',true);
+assert.equal(copy.tasks.camera.selected.length,25);
+assert.equal(copy.tasks.depth.selected.length,24);
+copy.tasks.camera.records['scannetpp-scene_44'].note='中文备注 <script>not executable</script>';
+assert.deepEqual(restoreState(makeExport(copy,manifest,{}),manifest,state).state.tasks,copy.tasks);
+const bad=structuredClone(state);bad.tasks.camera.selected.push('unknown');
+assert.throws(()=>restoreState(bad,manifest,state));
+const dup=structuredClone(state);dup.tasks.nvs.selected.push(dup.tasks.nvs.selected[0]);
+assert.throws(()=>restoreState(dup,manifest,state));
+for(const task of ['nvs','depth','camera'])for(const c of manifest[task].cases){
+ for(const path of [c.thumbnail,c.poses,c.clock_video,c.input_video,c.trajectory_video,...Object.values(c.views).flatMap(v=>[v.src,v.poster])].filter(Boolean))assert(fs.existsSync(new URL('../'+path,import.meta.url)),path);
+}
+assert.equal(JSON.stringify(manifest),before);
+console.log('PASS: 210 candidates, 24/24/24 defaults, 23 camera exclusions, 15+9 provisional split, task isolation, import/export, invalid IDs and all asset references.');

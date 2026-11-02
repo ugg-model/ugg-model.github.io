@@ -1,0 +1,24 @@
+{
+  "source": "nvs/dl3dv20__ncf2/sample_00001",
+  "metadata": {
+    "prediction": {
+      "frames": 50,
+      "fps": 30.0,
+      "width": 384,
+      "height": 288
+    },
+    "reference": {
+      "frames": 50,
+      "fps": 30.0,
+      "width": 384,
+      "height": 288
+    }
+  },
+  "selection": "Ground-truth PSNR oracle selection",
+  "comparison": "Prediction left, reference right, matching frame order and native FPS",
+  "sha256": {
+    "prediction": "b902c21397678e27f033a9ea4014fbfce7bcacd67a16fb291e24ae73abcfde0a",
+    "reference": "8edfcdc788aad99aee19baa6d29f95461a78efa217a9983185f0f797545e94f4",
+    "comparison": "5db860794efc042275dce6aa4fa98bb12ea564ce2dfde0bd1fd6e66c43877f80"
+  }
+}

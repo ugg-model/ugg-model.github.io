@@ -1,0 +1,18 @@
+outputs
+.runtime/
+.migration/
+__pycache__/
+node_modules/
+docs/worklog/
+dist
+
+# Scratch backups
+*.bak
+
+# Point-cloud recordings. assets/viser/recon/*.viser IS the shipped gallery --
+# the page plays it through the shared client in viser/viser-client/, so do NOT
+# widen this to assets/viser/**/*.viser or the 3D Reconstruction section ships
+# empty. Only loose top-level recordings are ignored: those are scratch exports
+# next to a self-contained *.html that already embeds the same payload.
+# Regenerate with tools/build_reconstruction_gallery.py.
+assets/viser/*.viser

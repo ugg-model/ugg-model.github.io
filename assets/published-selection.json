@@ -1,0 +1,115 @@
+{
+  "schema": "ugg-showcase/v1",
+  "selection_basis": "User-exported selected arrays, in their exact order; supersedes earlier review defaults and exclusions.",
+  "source_export": "UGG_selections_1791910567753.json",
+  "source_export_sha256": "41e48de4f2353289b8fda24ccc060a6e6ca0bfc79cb97854caaf67cf19847e5c",
+  "exported_at": "2026-10-13T16:56:07.753Z",
+  "based_on_commit": "276f6086638c506b64dab3299e35339a0746c995",
+  "tasks": {
+    "nvs": {
+      "selected": [
+        "re10k128_50f__ncf2-sample_00064",
+        "re10k128_50f__ncf2-sample_00097",
+        "re10k_c50__ncf2-sample_00008",
+        "re10k_c50__ncf2-sample_00004",
+        "re10k128_50f__ncf2-sample_00063",
+        "re10k128_50f__ncf2-sample_00054",
+        "dl3dv20__ncf2-sample_00000",
+        "dl3dv20__ncf2-sample_00012",
+        "re10k_c50__ncf2-sample_00006",
+        "re10k128_50f__ncf2-sample_00100",
+        "dl3dv20__ncf2-sample_00009",
+        "dl3dv20__ncf2-sample_00007",
+        "re10k_c50__ncf2-sample_00000",
+        "re10k128_50f__ncf2-sample_00118",
+        "re10k128_50f__ncf2-sample_00018",
+        "re10k_c50__ncf2-sample_00002",
+        "re10k128_50f__ncf2-sample_00025",
+        "re10k128_50f__ncf2-sample_00076",
+        "re10k_c50__ncf2-sample_00005",
+        "re10k128_50f__ncf2-sample_00113",
+        "re10k_c50__ncf2-sample_00007",
+        "dl3dv20__ncf2-sample_00006",
+        "dl3dv20__ncf2-sample_00018",
+        "spatialvid__ncf2-sample_00007"
+      ],
+      "candidate_count": 72,
+      "dataset_counts": {
+        "re10k128_50f": 10,
+        "re10k_c50": 7,
+        "dl3dv20": 6,
+        "spatialvid": 1
+      }
+    },
+    "depth": {
+      "selected": [
+        "scannetpp-scene_44",
+        "scannetpp-scene_18",
+        "scannetpp-scene_19",
+        "bonn-rgbd_bonn_person_tracking2",
+        "sintel-alley_2",
+        "kitti-2011_09_26_drive_0095_sync_02",
+        "scannetpp-scene_3",
+        "scannetpp-scene_4",
+        "bonn-rgbd_bonn_crowd3",
+        "kitti-2011_09_28_drive_0037_sync_02",
+        "scannetpp-scene_46",
+        "scannetpp-scene_32",
+        "scannetpp-scene_36",
+        "scannetpp-scene_38",
+        "kitti-2011_09_30_drive_0016_sync_02",
+        "kitti-2011_10_03_drive_0047_sync_02",
+        "sintel-sleeping_2",
+        "bonn-rgbd_bonn_crowd2",
+        "scannetpp-scene_6",
+        "kitti-2011_09_26_drive_0005_sync_02",
+        "scannetpp-scene_29",
+        "scannetpp-scene_35",
+        "scannetpp-scene_20",
+        "scannetpp-scene_11"
+      ],
+      "candidate_count": 72,
+      "dataset_counts": {
+        "scannetpp": 14,
+        "bonn": 3,
+        "sintel": 2,
+        "kitti": 5
+      }
+    },
+    "camera": {
+      "selected": [
+        "scannetpp-scene_3",
+        "scannetpp-scene_42",
+        "scannetpp-scene_4",
+        "scannetpp-scene_32",
+        "sintel-temple_2",
+        "scannetpp-scene_46",
+        "scannetpp-scene_25",
+        "scannetpp-scene_6",
+        "scannetpp-scene_2",
+        "scannetpp-scene_37",
+        "scannetpp-scene_33",
+        "scannetpp-scene_11",
+        "scannetpp-scene_9",
+        "scannetpp-scene_17",
+        "scannetpp-scene_1",
+        "sintel-sleeping_2",
+        "scannetpp-scene_28",
+        "scannetpp-scene_24",
+        "scannetpp-scene_45",
+        "scannetpp-scene_10",
+        "scannetpp-scene_12",
+        "scannetpp-scene_22",
+        "scannetpp-scene_19",
+        "bonn-rgbd_bonn_balloon2"
+      ],
+      "candidate_count": 66,
+      "dataset_counts": {
+        "scannetpp": 21,
+        "sintel": 2,
+        "bonn": 1
+      }
+    }
+  },
+  "note": "Curated GT-oracle-selected showcase results, not representative average benchmark performance. Original media and benchmark values are unchanged."
+}

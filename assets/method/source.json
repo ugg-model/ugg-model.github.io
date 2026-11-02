@@ -1,0 +1,104 @@
+{
+  "source": "figures_neurips26_unified_generative_geometry_model.pptx",
+  "source_sha256": "96a9e03b6f78cd89b3aecbf0129cd13a6d4d41a6d3de420cea5554a72e1409a4",
+  "slide": 1,
+  "note": "Lossless WebP with original pixel dimensions/colors; architecture labels and shapes rebuilt in HTML/CSS.",
+  "images": [
+    {
+      "file": "assets/method/rgb-input.webp",
+      "member": "ppt/media/image6.png",
+      "source_sha256": "6dfb887f37a168339a2c0708e7aa7245a177cdd2785797f18eff0bccccd20ef8",
+      "sha256": "c986d37ec16215eb33d4322d9085957a4c4169f70dc611ea43382a84067c4128",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/depth-input.webp",
+      "member": "ppt/media/image8.png",
+      "source_sha256": "7ad141b10681447997d98c3df650848f14af9aa2f5b0cfe50fa1852b001a9e3a",
+      "sha256": "b614f711a6c458a33cc3061a66b807921a8eac7281f73802bd771b157204ba2c",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/ray-input.webp",
+      "member": "ppt/media/image5.png",
+      "source_sha256": "b9e12e0fbac935cee0a6bb4839127f7e3ef77b95a37588a3b01ce435cce3ae69",
+      "sha256": "7ee1196886f2d081eadf683e0857e22456ace70e5e0a77c953f0a8d2f3976884",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/rgb-1.webp",
+      "member": "ppt/media/image9.png",
+      "source_sha256": "ed70039bcd0f2f647bed0ff861feae6784ef367aa8218f49b667aabd215845cb",
+      "sha256": "b99a9ee0247ff778c8820faad161fb55db6943bc39efb4f61e5fb8a0945b1920",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/rgb-2.webp",
+      "member": "ppt/media/image10.png",
+      "source_sha256": "a15f7ead0347083dd09f969627e55d8cc3dd6f50c84a0152bfb4e4228d509972",
+      "sha256": "7afe9e64db8990dbbfe56ea13555cabe8366b961ea5382ebf51261e1beef9428",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/rgb-3.webp",
+      "member": "ppt/media/image11.png",
+      "source_sha256": "033be9a4bebf7628ad895f0b9790d23e0132ce64105ad6fed74308b8954558ad",
+      "sha256": "68ccbf2ce114b201079e3fce4a78d131587f1c26c14c14fd6d1ea940291523da",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/depth-1.webp",
+      "member": "ppt/media/image12.png",
+      "source_sha256": "c953d75b137177e2a81413ed56138529940f3602d6d732fbd8d31ba59bc19747",
+      "sha256": "662f414ac92f5ff39d651375bd3f2c0910b11bab2954ecb7995be1c605cc5bb4",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/depth-2.webp",
+      "member": "ppt/media/image13.png",
+      "source_sha256": "d5c874ac52023fc6134bdc69f14eb2d9201d031d80e52331beff591b972dc404",
+      "sha256": "c2d4d9d4bacc415f9f082a7268c47f8ecf469ec48e62325324e5940e02c03171",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/depth-3.webp",
+      "member": "ppt/media/image14.png",
+      "source_sha256": "4686fba89fec5cbb7b2ef5d9cf4c3bc557076ee0f0540f36e2455797d434b44b",
+      "sha256": "62c6c4d7bda56bba1993659add8c86205ab0be80433bc81bebd839631c109521",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/ray-1.webp",
+      "member": "ppt/media/image15.png",
+      "source_sha256": "08aef3640f1b85da6e788788ac7ab5063e04bcef0624591701f245071b04a35c",
+      "sha256": "86b0384f7bcb85b01af39e78f4e1a40c4b53540b12995f2febb0a1f715548d04",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/ray-2.webp",
+      "member": "ppt/media/image16.png",
+      "source_sha256": "57eaca88fbb38a68dc3df9bcc01c40beb750c780f3fdfc268a65b451b34c04ea",
+      "sha256": "b9815447729fa1ccba3c68f043afda49bd818a05399893fd442ec6556a3a81ff",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "assets/method/ray-3.webp",
+      "member": "ppt/media/image17.png",
+      "source_sha256": "dbda013b239c296df3ab823077f57251a1e98f0d550fa4149af9575df657df6b",
+      "sha256": "39d21bb5a145a5a2fb5078f4f2768c8c045fd62bc82eef5f8f1fcbd9e11573c4",
+      "width": 320,
+      "height": 240
+    }
+  ]
+}

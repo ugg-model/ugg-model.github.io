@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light">
+<title>UGG · 素材筛选台</title>
+<link rel="icon" href="../assets/favicon.svg"><link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="review.css">
+<link rel="stylesheet" href="viewport.css?v=scroll-fix-1">
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<script type="module" src="app.mjs?v=scroll-fix-1"></script>
+</head>
+<body class="review-app">
+<a href="#workspace" class="skip-link">跳到素材</a>
+<div class="review-top"><a class="review-brand" href="../" target="_blank" rel="noopener">UGG<span>/</span><strong>CURATOR</strong></a><div class="top-actions"><span id="save-state" role="status">正在载入…</span><button id="import-button" type="button">导入记录</button><button id="export-button" class="primary" type="button">导出全部选择 ↓</button><input id="import-file" type="file" accept="application/json,.json" hidden></div></div>
+<main class="review-shell">
+<div class="intro"><div><p class="eyebrow">RESEARCH MEDIA REVIEW</p><h1>素材筛选台<span class="intro-dot">.</span></h1><p class="subline">看完整结果，再决定留下哪些。勾选独立于论文主页，不会直接改动线上展示。</p></div><div class="overall"><strong id="overall-selected">—</strong><span>已选 / <b id="overall-total">—</b> 个候选</span><small>每项 24 个仅作参考，可自由增减</small></div></div>
+<div class="notice">首次载入默认勾选上轮推荐的各 24 个。选择与备注只保存在<b>当前浏览器</b>，跨设备或交给合作者请导出 JSON。未勾选不等于确认淘汰。</div>
+<div id="fatal" class="fatal" role="alert" hidden></div>
+<div id="task-tabs" class="task-tabs" role="tablist" aria-label="选择任务"></div>
+<div class="workspace" id="workspace">
+<section class="library" aria-label="全部候选素材">
+<div class="filterbar"><label class="search-field"><span class="sr-only">搜索案例</span><input type="search" id="search" placeholder="搜索 scene、sample、ID…" autocomplete="off"></label><label><span class="sr-only">数据集</span><select id="dataset" aria-label="数据集"></select></label><label id="protocol-field"><span class="sr-only">输入条件</span><select id="protocol" aria-label="输入条件"></select></label></div>
+<div class="filterline"><div id="status-tabs" class="status-tabs" role="group" aria-label="筛选状态"><button type="button" data-status="all" aria-pressed="true">全部</button><button type="button" data-status="selected" aria-pressed="false">已选</button><button type="button" data-status="unselected" aria-pressed="false">未选</button><button type="button" data-status="unreviewed" aria-pressed="false">待复核</button></div><select id="sort" aria-label="排序"><option value="original">原网页顺序</option><option value="recommended">上轮推荐优先</option><option value="selected">已选优先</option></select></div>
+<div class="library-meta"><span id="result-count" aria-live="polite"></span><div><button id="select-visible" type="button">选中筛选结果</button><button id="clear-visible" type="button">取消筛选结果</button><button id="undo" type="button" disabled>撤销</button></div></div>
+<div class="case-grid" id="case-grid"></div><p class="empty" id="empty" hidden>没有符合条件的案例。试试清空搜索或切换筛选。</p>
+<div class="library-footer"><button id="reset-task" type="button">恢复本任务的上轮 24 个</button><span>仅恢复勾选，保留你的备注。</span></div>
+</section>
+<aside class="inspector" id="inspector" aria-label="案例详情与播放器">
+<div class="inspector-head"><div><p class="eyebrow" id="preview-dataset">SELECT A CASE</p><h2 id="preview-title">点击左侧缩略图</h2></div><div class="case-navigation"><button id="prev-case" type="button" aria-label="上一个案例">←</button><button id="next-case" type="button" aria-label="下一个案例">→</button></div></div>
+<div id="inspector-content" hidden>
+<div class="preview-mode"><div><button id="interactive-mode" type="button" aria-pressed="true">同步预览</button><button id="trajectory-mode" type="button" aria-pressed="false" hidden>原始轨迹视频</button></div><button id="expand" type="button">放大预览 ↗</button></div>
+<div id="viewer-host" class="review-viewer"></div><div id="raw-host" class="raw-host" hidden></div>
+<div class="decision"><label class="keep-label"><input id="keep-current" type="checkbox"><span>保留这个案例</span></label><button id="mark-reviewed" type="button">标记已复核</button></div>
+<div class="preview-metadata"><span id="reference-badge"></span><span id="review-badge"></span></div>
+<label class="notes-label" for="notes">备注 <span>例如：中段变形、朝向异常、适合放首屏</span></label><textarea id="notes" rows="2" maxlength="4000" placeholder="给自己或合作者留下判断依据…"></textarea>
+<details class="source-info"><summary>素材信息与原始链接</summary><p id="case-id" class="mono"></p><p id="case-description"></p><div id="source-links"></div><p class="fineprint">原始发布结果经过 GT oracle selection。NVS 的相机是给定目标相机，不是预测相机。筛选仅用于展示，不能代表平均性能。</p></details>
+<div class="inspector-footer"><button id="copy-link" type="button">复制此案例链接</button><button id="export-task" type="button">导出本任务 IDs</button><span class="keyboard-help">J / K 切换 · S 勾选 · R 已复核</span></div>
+</div>
+</aside>
+</div>
+<footer class="review-footer"><span>UGG · 独立筛选工作区</span><span id="archive-note">读取未裁剪的候选清单，不应用主页展示限制。</span><a href="../" target="_blank" rel="noopener">论文主页 ↗</a></footer>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<noscript><p>请启用 JavaScript，以加载全部候选、播放器和勾选功能。</p></noscript>
+</body></html>

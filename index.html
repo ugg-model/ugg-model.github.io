@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="UGG: Unified Generative Geometry Model. A single joint generative model for RGB video, depth, and camera geometry.">
+<meta name="color-scheme" content="light">
+<title>UGG: Unified Generative Geometry Model</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css?v=20261027-1706">
+<link rel="stylesheet" href="assets/benchmarks/benchmarks.css?v=20261027-1706">
+<link rel="stylesheet" href="assets/method/method.css?v=20261027-1706">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<script src="app.js?v=20261027-1706" defer></script>
+<script type="module" src="results-flow.js?v=20261027-1706"></script>
+<script src="assets/benchmarks/data.js?v=20261027-1706" defer></script>
+<script src="assets/benchmarks/benchmarks.js?v=20261027-1706" defer></script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="top" aria-label="Main navigation"><div class="wrap">
+  <a class="brand" href="#top">UGG</a>
+  <div class="navlinks"><a href="#abstract">Abstract</a><a href="#results">Results</a><a href="#method">Method</a><a href="#benchmarks">Benchmarks</a><a href="#bibtex">BibTeX</a></div>
+  <a class="navpaper" href="assets/ugg-paper.pdf" target="_blank" rel="noopener">Paper ↗</a>
+</div></nav>
+<header><div class="wrap">
+  <h1><span class="m">UGG</span>: Unified Generative Geometry Model</h1>
+  <p class="authors"><span class="au"><a href="https://amanikiruga.github.io/" target="_blank" rel="noopener">Amani Kiruga</a><sup>1*</sup></span>, <span class="au"><a href="https://sky-lzy.github.io/" target="_blank" rel="noopener">Zhiyi Li</a><sup>2*</sup></span>, <span class="au"><a href="https://ruojincai.github.io/" target="_blank" rel="noopener">Ruojin Cai</a><sup>1*</sup></span>, <span class="au"><a href="https://hansenlillemark.com/" target="_blank" rel="noopener">Hansen Lillemark</a><sup>3</sup></span>, <span class="au"><a href="https://candy-crusher.github.io/xiaoshanwu.github.io/" target="_blank" rel="noopener">Xiaoshan Wu</a><sup>1</sup></span>, <span class="au"><a href="https://ayushtewari.com/" target="_blank" rel="noopener">Ayush Tewari</a><sup>4</sup></span>, <span class="au"><a href="https://yilundu.github.io/" target="_blank" rel="noopener">Yilun Du</a><sup>1</sup></span></p>
+  <p class="affil"><sup>1</sup>Harvard University &nbsp; <sup>2</sup>MIT &nbsp; <sup>3</sup>UC San Diego &nbsp; <sup>4</sup>University of Cambridge</p>
+  <p class="equal"><sup>*</sup>Equal contribution</p>
+  <p class="venue">NeurIPS 2026</p>
+  <div class="links">
+    <a href="assets/ugg-paper.pdf" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6v20h12V6zM14 2v6h6M8 13h8M8 17h8"/></svg>Paper</a>
+    <span class="link-placeholder" aria-label="arXiv link coming soon">arXiv <small>Coming soon</small></span>
+    <span class="link-placeholder" aria-label="Code link coming soon">Code <small>Coming soon</small></span>
+  </div>
+  <p class="tldr"><span class="k">TL;DR</span>A single model jointly generates <b>RGB video, depth, and camera geometry</b>, turning visual generation and geometric prediction into conditional completion of the same 4D scene.</p>
+</div></header>
+<main id="main">
+<section id="abstract"><div class="wrap">
+  <h2>Abstract</h2>
+  <p class="prose measure">Understanding 4D scenes is a core challenge in visual intelligence, requiring models to jointly capture scene geometry, appearance, and dynamics from partial observations. Existing approaches, however, are subdivided into feedforward models that are used for direct geometric prediction and generative models for visual synthesis. We propose a unified generative-predictive framework for 4D scene understanding that jointly models RGB video and geometric representations such as depth and camera pose with a single joint generative model. Our generative formulation enables us to learn from diverse, heterogeneous datasets with different subsets of geometric and visual annotations, and enables us to condition on arbitrary subsets of inputs, allowing a single model to perform cross-modal generation, geometric prediction, and future scene inference from partial observations. In addition, our generative approach enables test-time search over multiple candidate scene completions, improving geometric prediction from sparse observations. Overall, we illustrate the efficacy of our generative-predictive framework on a suite of generation and prediction tasks.</p>
+</div></section>
+<section id="results"><div class="wrap">
+  <h2>Results</h2>
+  <p class="lede">Choose a task. See what goes in, and what UGG generates.</p>
+  <div id="results-flow" hidden></div>
+  <noscript><div class="result-links" aria-label="Jump to a result"><a href="#reconstruction">3D Reconstruction</a><a href="#nvs">NVS</a><a href="#depth">Depth Prediction</a><a href="#camera">Camera Prediction</a><a href="#generation">Text-to-4D</a></div></noscript>
+</div></section>
+<section id="reconstruction" class="result-section" data-result-task="reconstruction" aria-labelledby="heading-reconstruction"><div class="wrap">
+  <h2 id="heading-reconstruction">3D Reconstruction</h2><p class="lede">Explore reconstructed scene geometry in an interactive 3D view.</p>
+  <div class="result-gallery"><div class="case-viewer"><div class="panel placeholder"><div class="placeholder-inner"><div class="pending">3D reconstruction · placeholder</div><h3>Explore the scene in 3D</h3><p>The selected reconstruction and interactive viewer will go here.</p></div></div></div><p class="case-prompt">Choose a case</p><div class="case-thumbnails thumb-grid" role="group" aria-label="3D reconstruction cases"></div></div>
+</div></section>
+<section id="nvs" class="result-section" data-result-task="nvs" aria-labelledby="heading-nvs"><div class="wrap">
+  <h2 id="heading-nvs">Novel View Synthesis</h2><p class="lede">Generate unseen views given observed frames and camera geometry.</p>
+  <div class="result-gallery"><div class="case-viewer"><div class="panel placeholder">Loading the provisional novel-view example…</div></div><p class="case-prompt">Choose a case</p><div class="case-thumbnails thumb-grid" role="group" aria-label="Novel view synthesis cases"></div></div>
+</div></section>
+<section id="depth" class="result-section" data-result-task="depth" aria-labelledby="heading-depth"><div class="wrap">
+  <h2 id="heading-depth">Depth Prediction</h2><p class="lede">Infer scene geometry from observed RGB frames.</p>
+  <div class="result-gallery"><div class="case-viewer"><div class="panel placeholder">Loading the provisional depth example…</div></div><p class="case-prompt">Choose a case</p><div class="case-thumbnails thumb-grid" role="group" aria-label="Depth prediction cases"></div></div>
+</div></section>
+<section id="camera" class="result-section" data-result-task="camera" aria-labelledby="heading-camera"><div class="wrap">
+  <h2 id="heading-camera">Camera Prediction</h2><p class="lede">Recover camera geometry from visual observations.</p>
+  <div class="result-gallery"><div class="case-viewer"><div class="panel placeholder">Loading the provisional camera example…</div></div><p class="case-prompt">Choose a case</p><div class="case-thumbnails thumb-grid" role="group" aria-label="Camera prediction cases"></div></div>
+  <noscript><p class="caption">Enable JavaScript to load the result viewers and choose cases. All five task sections remain visible.</p></noscript>
+</div></section>
+<section id="generation" class="result-section" data-result-task="generation" aria-labelledby="heading-generation"><div class="wrap">
+  <h2 id="heading-generation">Text-to-4D Generation</h2><p class="lede">Generate appearance, depth, and camera motion from a text prompt.</p>
+  <div class="result-gallery"><div class="case-viewer"><div class="panel placeholder">Loading the generated scene…</div></div><p class="case-prompt">Choose a case</p><div class="case-thumbnails thumb-grid" role="group" aria-label="Text-to-4D generation cases"></div></div>
+</div></section>
+<section id="method"><div class="wrap">
+  <h2>Method</h2>
+  <p class="lede">Generation and prediction through a shared model of the scene.</p>
+  <figure class="figbox method-figure">
+    <div class="uggfig" role="img" aria-label="UGG architecture. Observed RGB, depth, ray-map and text are encoded into tokens; a transformer block repeated L times applies modality-specific QKV projections, joint multi-modal self-attention across all modalities, cross-attention to text and modality-specific feed-forward layers, each modulated by the diffusion timestep; decoded outputs are RGB, depth and ray-map sequences.">
+      <div class="uggfig-stage">
+
+        <div class="ug-h" style="left:0">Observation</div>
+        <div class="ug-h" style="left:268px;width:520px;text-align:center">Unified Generative Geometry Model</div>
+        <div class="ug-h" style="left:800px;width:480px;text-align:center">Output</div>
+
+        <!-- ================= observation ================= -->
+        <div class="ug-obs">
+          <div class="ug-src" style="--bb:var(--blue-b);--bg:var(--blue)">
+            <div class="ug-box"><span class="cap">RGB</span><img src="assets/method/rgb-input.webp" alt="" loading="lazy" width="320" height="240"></div>
+            <div class="ug-tz ug-enc"></div>
+            <div class="ug-stack"><i class="tk b"></i><i class="tk b n"></i><i class="tk b n"></i></div>
+          </div>
+          <div class="ug-src" style="--bb:var(--yel-b);--bg:var(--yel)">
+            <div class="ug-box"><span class="cap">Depth</span><img src="assets/method/depth-input.webp" alt="" loading="lazy" width="320" height="240"></div>
+            <div class="ug-tz ug-enc"></div>
+            <div class="ug-stack"><i class="tk y"></i><i class="tk y n"></i><i class="tk y n"></i></div>
+          </div>
+          <div class="ug-src" style="--bb:var(--pink-b);--bg:var(--pink)">
+            <div class="ug-box"><span class="cap">Ray Map</span><span class="rayimg"><img src="assets/method/ray-input.webp" alt="" loading="lazy" width="320" height="240"></span></div>
+            <div class="ug-tz ug-enc"></div>
+            <div class="ug-stack"><i class="tk p"></i><i class="tk p n"></i><i class="tk p n"></i></div>
+          </div>
+          <div class="ug-src" style="--bb:var(--pur-b);--bg:var(--pur)">
+            <div class="ug-box sm"><span class="cap">Prompt</span></div>
+            <div class="ug-tz ug-enc sm"></div>
+            <div class="ug-stack"><i class="tk v"></i></div>
+          </div>
+        </div>
+
+        <!-- ================= network ================= -->
+        <div class="ug-net">
+          <div class="ug-L">&times; <i>L</i> times</div>
+
+          <div class="ug-rowtok" style="top:42px">
+            <i class="tk b"></i><i class="tk b n"></i><i class="tk b n"></i><span class="gap">…</span>
+            <i class="tk y"></i><i class="tk y n"></i><i class="tk y n"></i><span class="gap">…</span>
+            <i class="tk p"></i><i class="tk p n"></i><i class="tk p n"></i><span class="sp"></span>
+          </div>
+
+          <div class="ug-three" style="top:91px">
+            <div class="ug-pill" style="--bb:var(--blue-b);--bg:var(--blue)">QKV Proj</div>
+            <div class="ug-pill" style="--bb:var(--yel-b);--bg:var(--yel)">QKV Proj</div>
+            <div class="ug-pill" style="--bb:var(--pink-b);--bg:var(--pink)">QKV Proj</div>
+          </div>
+
+          <div class="ug-wide" style="top:147px">
+            <div class="ug-pill ug-att" style="--bb:var(--gry-b);--bg:var(--gry)">
+              <b>Joint Multi-Modal Self-Attention</b><i>(tokens from all modalities interact)</i>
+            </div>
+          </div>
+
+          <div class="ug-wide" style="top:245px">
+            <div class="ug-pill h46" style="--bb:var(--pur-b);--bg:var(--pur)">Cross-Attention to Text</div>
+          </div>
+
+          <div class="ug-three" style="top:304px">
+            <div class="ug-pill h47" style="--bb:var(--blue-b);--bg:var(--blue)">FFN</div>
+            <div class="ug-pill h47" style="--bb:var(--yel-b);--bg:var(--yel)">FFN</div>
+            <div class="ug-pill h47" style="--bb:var(--pink-b);--bg:var(--pink)">FFN</div>
+          </div>
+
+          <div class="ug-rowtok" style="top:364px">
+            <i class="tk b"></i><i class="tk b"></i><i class="tk b"></i><span class="gap">…</span>
+            <i class="tk y"></i><i class="tk y"></i><i class="tk y"></i><span class="gap">…</span>
+            <i class="tk p"></i><i class="tk p"></i><i class="tk p"></i><span class="sp"></span>
+          </div>
+
+          <div class="ug-rail" style="top:20px">
+            <div class="wire"></div>
+            <div class="ug-chip t" style="top:0"><i>t</i></div>
+            <div class="ug-chip" style="top:75px">mod</div>
+            <div class="ug-chip" style="top:152px">mod</div>
+            <div class="ug-chip" style="top:290px">mod</div>
+          </div>
+        </div>
+
+        <!-- ================= outputs ================= -->
+        <div class="ug-out">
+          <div class="ug-orow" style="--bb:var(--blue-b);--bg:var(--blue)">
+            <div class="ug-stack" style="margin:0 10px 0 0"><i class="tk b"></i><i class="tk b"></i><i class="tk b"></i></div>
+            <div class="ug-tz ug-dec" style="margin:0 10px 0 0"></div>
+            <div class="ug-opanel"><span class="cap">RGB</span><div class="ug-strip">
+              <img src="assets/method/rgb-1.webp" alt="" loading="lazy" width="320" height="240">
+              <img src="assets/method/rgb-2.webp" alt="" loading="lazy" width="320" height="240">
+              <img src="assets/method/rgb-3.webp" alt="" loading="lazy" width="320" height="240"></div></div>
+          </div>
+          <div class="ug-orow" style="--bb:var(--yel-b);--bg:var(--yel)">
+            <div class="ug-stack" style="margin:0 10px 0 0"><i class="tk y"></i><i class="tk y"></i><i class="tk y"></i></div>
+            <div class="ug-tz ug-dec" style="margin:0 10px 0 0"></div>
+            <div class="ug-opanel"><span class="cap">Depth</span><div class="ug-strip">
+              <img src="assets/method/depth-1.webp" alt="" loading="lazy" width="320" height="240">
+              <img src="assets/method/depth-2.webp" alt="" loading="lazy" width="320" height="240">
+              <img src="assets/method/depth-3.webp" alt="" loading="lazy" width="320" height="240"></div></div>
+          </div>
+          <div class="ug-orow" style="--bb:var(--pink-b);--bg:var(--pink)">
+            <div class="ug-stack" style="margin:0 10px 0 0"><i class="tk p"></i><i class="tk p"></i><i class="tk p"></i></div>
+            <div class="ug-tz ug-dec" style="margin:0 10px 0 0"></div>
+            <div class="ug-opanel hasray"><span class="cap">Ray Map</span><div class="ug-strip">
+              <span class="rayimg"><img src="assets/method/ray-1.webp" alt="" loading="lazy" width="320" height="240"></span>
+              <span class="rayimg"><img src="assets/method/ray-2.webp" alt="" loading="lazy" width="320" height="240"></span>
+              <span class="rayimg"><img src="assets/method/ray-3.webp" alt="" loading="lazy" width="320" height="240"></span></div></div>
+          </div>
+        </div>
+
+        <div class="ug-legend">
+          <span><i class="tk b"></i>RGB</span>
+          <span><i class="tk y"></i>Depth</span>
+          <span><i class="tk p"></i>Ray Map</span>
+          <span><i class="tk v"></i>Text</span>
+          <span><i class="tk"></i>Token</span>
+          <span><i class="tk n"></i>Noisy token</span>
+          <span><i class="chip"><i>t</i></i>Diffusion timestep</span>
+        </div>
+
+      </div>
+    </div>
+    <figcaption>A shared transformer models appearance and geometry across modalities.</figcaption>
+  </figure>
+  <div class="method-cards">
+    <article class="method-card"><span class="method-number">01</span><h3>A shared scene representation</h3><p>UGG represents RGB, depth, and camera geometry as spatially aligned modalities. A multimodal transformer exchanges information through shared self-attention and uses modality-specific layers.</p></article>
+    <article class="method-card"><span class="method-number">02</span><h3>Condition on what is observed</h3><p>Clean tokens provide context, while noisy tokens mark components to generate. Varying this pattern across modality and time lets the same model answer different prediction and generation queries.</p></article>
+    <article class="method-card"><span class="method-number">03</span><h3>Search over scene hypotheses</h3><p>The generative formulation supports multiple candidate scene completions. The paper explores selecting candidates using cross-modal consistency measured through photometric reprojection.</p></article>
+  </div>
+</div></section>
+<section id="benchmarks" aria-labelledby="bm-heading"><div class="wrap">
+  <h2 id="bm-heading">Benchmarks</h2>
+  <p class="lede">One model for generation and geometric prediction. Explore the results by task, observation setting, and dataset.</p>
+  <p id="bm-fallback" class="bm-context">See <a href="assets/ugg-paper.pdf#page=7" target="_blank" rel="noopener">Tables 1–4 in the paper</a>. Interactive charts load when JavaScript is available.</p>
+  <div id="bm-app" hidden>
+    <div id="bm-tabs" class="bm-tabs" role="tablist" aria-label="Benchmark task"></div>
+    <div id="bm-panel" role="tabpanel" aria-labelledby="bm-tab-generation">
+      <div class="bm-toolbar">
+        <div id="bm-modes" class="bm-modes" role="group" aria-label="Evaluation setting"></div>
+        <label class="bm-filter" for="bm-dataset">Dataset <select id="bm-dataset"><option value="all">All datasets</option></select></label>
+      </div>
+      <label id="bm-oracle-control" class="bm-oracle-control" hidden><input id="bm-oracle" type="checkbox"> Show TTS Oracle reference in charts †</label>
+      <p id="bm-context" class="bm-context"></p>
+      <div id="bm-legend" class="bm-legend" aria-label="Methods and variants"></div>
+      <div id="bm-charts" class="bm-charts"></div>
+      <p class="bm-chart-note">↑ Higher is better. ↓ Lower is better. Bars start at zero; each dataset and metric has its own scale. Hover or focus a bar for its method and value.</p>
+      <p id="bm-note" class="bm-note"></p>
+      <div class="bm-source"><a id="bm-paper" href="assets/ugg-paper.pdf#page=7" target="_blank" rel="noopener">Paper · Table 1 ↗</a><button id="bm-download" class="bm-download" type="button">Download full task CSV ↓</button></div>
+      <details class="bm-tables">
+        <summary>Full result tables · all settings and datasets</summary>
+        <p class="bm-table-note">Values from the UGG manuscript, Tables 1–4. UGG is labeled “Ours” in the paper. Bold, shaded cells mark the best non-oracle result within each comparison block, including ties. † TTS Oracle is a separate reference, excluded from best-result highlighting. These tables and the CSV are not filtered by the chart controls.</p>
+        <div id="bm-table-body"></div>
+      </details>
+    </div>
+    <p id="bm-status" class="bm-sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+  </div>
+</div></section>
+<section id="bibtex"><div class="wrap">
+  <h2>BibTeX</h2><p class="lede">Cite UGG.</p>
+  <div class="citation-top"><button class="copy-button" type="button" id="copy-citation">Copy BibTeX</button></div>
+  <pre class="measure"><code id="citation">@inproceedings{kiruga2026ugg,
+  title={UGG: Unified Generative Geometry Model},
+  author={Kiruga, Amani and Li, Zhiyi and Cai, Ruojin and
+          Lillemark, Hansen and Wu, Xiaoshan and Tewari, Ayush and Du, Yilun},
+  year={2026},
+  booktitle={Advances in Neural Information Processing Systems}
+}</code></pre>
+  <p class="caption">Publication details will be updated with the final paper link.</p>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <p>UGG: Unified Generative Geometry Model</p>
+  <p class="fine">Layout draft · Media selection in progress</p>
+</div></footer>
+<script src="assets/method/uggfig-scale.js?v=20261027-1706" defer></script>
+</body>
+</html>

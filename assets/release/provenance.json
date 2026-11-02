@@ -1,0 +1,5661 @@
+{
+  "release": "release-oracle-chosen",
+  "selection": "Oracle-selected against ground truth within a single release checkpoint. This does not represent ordinary test-time selection.",
+  "counts": {
+    "nvs": 72,
+    "depth": 72,
+    "camera": 66
+  },
+  "source_counts": {
+    "nvs": 456,
+    "depth": 80,
+    "pose": 66
+  },
+  "gallery_selection": {
+    "nvs": {
+      "limit": 72,
+      "available": 456,
+      "selected": 72,
+      "metric": "psnr",
+      "direction": "higher",
+      "dataset_available": {
+        "dl3dv20": 40,
+        "dl3dv_wide": 106,
+        "mip": 14,
+        "re10k128_50f": 256,
+        "re10k_c50": 20,
+        "spatialvid": 20
+      },
+      "dataset_quotas": {
+        "dl3dv20": 12,
+        "dl3dv_wide": 12,
+        "mip": 12,
+        "re10k128_50f": 12,
+        "re10k_c50": 12,
+        "spatialvid": 12
+      },
+      "tie_break": "case ID ascending",
+      "conditioning_policy": "Rank together across conditioning settings",
+      "task_independent": true,
+      "page_size": 24,
+      "page_datasets": [
+        {
+          "dl3dv20": 4,
+          "dl3dv_wide": 4,
+          "mip": 4,
+          "re10k128_50f": 4,
+          "re10k_c50": 4,
+          "spatialvid": 4
+        },
+        {
+          "dl3dv20": 4,
+          "dl3dv_wide": 4,
+          "mip": 4,
+          "re10k128_50f": 4,
+          "re10k_c50": 4,
+          "spatialvid": 4
+        },
+        {
+          "dl3dv20": 4,
+          "dl3dv_wide": 4,
+          "mip": 4,
+          "re10k128_50f": 4,
+          "re10k_c50": 4,
+          "spatialvid": 4
+        }
+      ],
+      "cutoff_scores": {
+        "dl3dv20": 16.6796,
+        "dl3dv_wide": 13.8122,
+        "mip": 12.4411,
+        "re10k128_50f": 28.1228,
+        "re10k_c50": 23.1443,
+        "spatialvid": 14.9936
+      },
+      "caption": "72 showcase clips selected by highest PSNR within datasets, with balanced dataset coverage."
+    },
+    "depth": {
+      "limit": 72,
+      "available": 80,
+      "selected": 72,
+      "metric": "abs_rel",
+      "direction": "lower",
+      "dataset_available": {
+        "bonn": 5,
+        "kitti": 13,
+        "scannetpp": 48,
+        "sintel": 14
+      },
+      "dataset_quotas": {
+        "bonn": 5,
+        "kitti": 13,
+        "scannetpp": 40,
+        "sintel": 14
+      },
+      "tie_break": "case ID ascending",
+      "conditioning_policy": "Not applicable",
+      "task_independent": true,
+      "page_size": 24,
+      "page_datasets": [
+        {
+          "bonn": 2,
+          "kitti": 4,
+          "scannetpp": 13,
+          "sintel": 5
+        },
+        {
+          "bonn": 1,
+          "kitti": 5,
+          "scannetpp": 14,
+          "sintel": 4
+        },
+        {
+          "bonn": 2,
+          "kitti": 4,
+          "scannetpp": 13,
+          "sintel": 5
+        }
+      ],
+      "cutoff_scores": {
+        "bonn": 0.08351,
+        "kitti": 0.120628,
+        "scannetpp": 0.089562,
+        "sintel": 0.647394
+      },
+      "caption": "72 showcase clips selected by lowest AbsRel within datasets, with balanced dataset coverage."
+    },
+    "camera": {
+      "limit": 72,
+      "available": 66,
+      "selected": 66,
+      "metric": "ate_m",
+      "direction": "lower",
+      "dataset_available": {
+        "bonn": 5,
+        "scannetpp": 48,
+        "sintel": 13
+      },
+      "dataset_quotas": {
+        "bonn": 5,
+        "scannetpp": 48,
+        "sintel": 13
+      },
+      "tie_break": "case ID ascending",
+      "conditioning_policy": "Not applicable",
+      "task_independent": true,
+      "page_size": 24,
+      "page_datasets": [
+        {
+          "bonn": 2,
+          "scannetpp": 17,
+          "sintel": 5
+        },
+        {
+          "bonn": 2,
+          "scannetpp": 18,
+          "sintel": 4
+        },
+        {
+          "bonn": 1,
+          "scannetpp": 13,
+          "sintel": 4
+        }
+      ],
+      "cutoff_scores": {
+        "bonn": 0.012647,
+        "scannetpp": 0.199537,
+        "sintel": 0.342664
+      },
+      "caption": "All 66 available clips, ordered by ATE within datasets and mixed across pages."
+    }
+  },
+  "frame_pairing": "The source release reports identical contig_first frame indices; paired videos were checked for equal frame counts and rates.",
+  "cases": [
+    {
+      "source": "nvs/dl3dv20__ncf1/sample_00006",
+      "status": "included",
+      "id": "dl3dv20__ncf1-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf1",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.5__sd70__st60",
+        "psnr": 17.8417,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf1/sample_00009",
+      "status": "included",
+      "id": "dl3dv20__ncf1-sample_00009",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf1",
+        "sample": "sample_00009",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.5__sd70__st60",
+        "psnr": 17.0204,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf1/sample_00011",
+      "status": "included",
+      "id": "dl3dv20__ncf1-sample_00011",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf1",
+        "sample": "sample_00011",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd51",
+        "psnr": 17.1759,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00000",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00000",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00000",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd703__st60",
+        "psnr": 19.0798,
+        "pool_size": 90
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00006",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd14",
+        "psnr": 19.9464,
+        "pool_size": 90
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00007",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00007",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00007",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd70__st60",
+        "psnr": 19.9567,
+        "pool_size": 89
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00009",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00009",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00009",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd50__st60",
+        "psnr": 20.1682,
+        "pool_size": 89
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00010",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00010",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00010",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg3.0__sd70__st60",
+        "psnr": 16.6796,
+        "pool_size": 90
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00011",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00011",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00011",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd20",
+        "psnr": 19.1516,
+        "pool_size": 90
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00012",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00012",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00012",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.5__sd70__st60",
+        "psnr": 19.5272,
+        "pool_size": 90
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00015",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00015",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00015",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd10",
+        "psnr": 16.808,
+        "pool_size": 90
+      }
+    },
+    {
+      "source": "nvs/dl3dv20__ncf2/sample_00018",
+      "status": "included",
+      "id": "dl3dv20__ncf2-sample_00018",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv20",
+        "ncf": "ncf2",
+        "sample": "sample_00018",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd8",
+        "psnr": 16.8721,
+        "pool_size": 90
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf1/sample_00011",
+      "status": "included",
+      "id": "dl3dv_wide__ncf1-sample_00011",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf1",
+        "sample": "sample_00011",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.2",
+        "psnr": 14.1264,
+        "pool_size": 20
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf1/sample_00012",
+      "status": "included",
+      "id": "dl3dv_wide__ncf1-sample_00012",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf1",
+        "sample": "sample_00012",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.8",
+        "psnr": 14.0412,
+        "pool_size": 20
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf1/sample_00025",
+      "status": "included",
+      "id": "dl3dv_wide__ncf1-sample_00025",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf1",
+        "sample": "sample_00025",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.2",
+        "psnr": 14.5681,
+        "pool_size": 20
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf1/sample_00044",
+      "status": "included",
+      "id": "dl3dv_wide__ncf1-sample_00044",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf1",
+        "sample": "sample_00044",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.1",
+        "psnr": 13.9486,
+        "pool_size": 20
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00004",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00004",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00004",
+        "checkpoint": "spdepth@2250",
+        "config": "sd504",
+        "psnr": 13.8122,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00011",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00011",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00011",
+        "checkpoint": "spdepth@2250",
+        "config": "sd502",
+        "psnr": 14.689,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00012",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00012",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00012",
+        "checkpoint": "spdepth@2250",
+        "config": "sd512",
+        "psnr": 15.6231,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00025",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00025",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00025",
+        "checkpoint": "spdepth@2250",
+        "config": "sd503",
+        "psnr": 14.4931,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00028",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00028",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00028",
+        "checkpoint": "spdepth@2250",
+        "config": "sd506",
+        "psnr": 14.2068,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00030",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00030",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00030",
+        "checkpoint": "spdepth@2250",
+        "config": "sd512",
+        "psnr": 14.5168,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00039",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00039",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00039",
+        "checkpoint": "spdepth@2250",
+        "config": "sd504",
+        "psnr": 13.9841,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/dl3dv_wide__ncf2/sample_00044",
+      "status": "included",
+      "id": "dl3dv_wide__ncf2-sample_00044",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "dl3dv_wide",
+        "ncf": "ncf2",
+        "sample": "sample_00044",
+        "checkpoint": "spdepth@2250",
+        "config": "sd511",
+        "psnr": 14.3847,
+        "pool_size": 16
+      }
+    },
+    {
+      "source": "nvs/mip__ncf1/sample_00001",
+      "status": "included",
+      "id": "mip__ncf1-sample_00001",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf1",
+        "sample": "sample_00001",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.6__hg1.0__sd50",
+        "psnr": 12.6387,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/mip__ncf1/sample_00002",
+      "status": "included",
+      "id": "mip__ncf1-sample_00002",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf1",
+        "sample": "sample_00002",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.5__sd130",
+        "psnr": 12.4411,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/mip__ncf1/sample_00003",
+      "status": "included",
+      "id": "mip__ncf1-sample_00003",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf1",
+        "sample": "sample_00003",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd50__st60",
+        "psnr": 14.7201,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/mip__ncf1/sample_00004",
+      "status": "included",
+      "id": "mip__ncf1-sample_00004",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf1",
+        "sample": "sample_00004",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.6__hg3.0__sd51",
+        "psnr": 12.9797,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/mip__ncf1/sample_00006",
+      "status": "included",
+      "id": "mip__ncf1-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf1",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.0__sd50",
+        "psnr": 13.4509,
+        "pool_size": 80
+      }
+    },
+    {
+      "source": "nvs/mip__ncf2/sample_00000",
+      "status": "included",
+      "id": "mip__ncf2-sample_00000",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf2",
+        "sample": "sample_00000",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.0__sd130",
+        "psnr": 12.4477,
+        "pool_size": 82
+      }
+    },
+    {
+      "source": "nvs/mip__ncf2/sample_00001",
+      "status": "included",
+      "id": "mip__ncf2-sample_00001",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf2",
+        "sample": "sample_00001",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.5__sd70__st60",
+        "psnr": 14.1713,
+        "pool_size": 82
+      }
+    },
+    {
+      "source": "nvs/mip__ncf2/sample_00002",
+      "status": "included",
+      "id": "mip__ncf2-sample_00002",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf2",
+        "sample": "sample_00002",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.0__sd30",
+        "psnr": 13.9201,
+        "pool_size": 82
+      }
+    },
+    {
+      "source": "nvs/mip__ncf2/sample_00003",
+      "status": "included",
+      "id": "mip__ncf2-sample_00003",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf2",
+        "sample": "sample_00003",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd50__st60",
+        "psnr": 15.1045,
+        "pool_size": 82
+      }
+    },
+    {
+      "source": "nvs/mip__ncf2/sample_00004",
+      "status": "included",
+      "id": "mip__ncf2-sample_00004",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf2",
+        "sample": "sample_00004",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd14",
+        "psnr": 13.923,
+        "pool_size": 82
+      }
+    },
+    {
+      "source": "nvs/mip__ncf2/sample_00005",
+      "status": "included",
+      "id": "mip__ncf2-sample_00005",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf2",
+        "sample": "sample_00005",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd702__st25",
+        "psnr": 14.2811,
+        "pool_size": 82
+      }
+    },
+    {
+      "source": "nvs/mip__ncf2/sample_00006",
+      "status": "included",
+      "id": "mip__ncf2-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "mip",
+        "ncf": "ncf2",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.1__hg0.5__sd700",
+        "psnr": 13.9069,
+        "pool_size": 82
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00018",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00018",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00018",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.5__hg1.5__sd95__st60",
+        "psnr": 28.6575,
+        "pool_size": 87
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00025",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00025",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00025",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.6__hg1.0__sd204",
+        "psnr": 28.2345,
+        "pool_size": 87
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00052",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00052",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00052",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.0__sd50",
+        "psnr": 29.1228,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00054",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00054",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00054",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.5__sd213",
+        "psnr": 28.1228,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00063",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00063",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00063",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.0__sd83",
+        "psnr": 30.5075,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00064",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00064",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00064",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.5__sd97__st60",
+        "psnr": 29.3369,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00069",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00069",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00069",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.3__hg1.5__sd52",
+        "psnr": 28.6406,
+        "pool_size": 84
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00076",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00076",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00076",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.5__sd86",
+        "psnr": 28.4224,
+        "pool_size": 78
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00097",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00097",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00097",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg2.5__sd63",
+        "psnr": 29.1953,
+        "pool_size": 72
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00100",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00100",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00100",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.5__sd97__st60",
+        "psnr": 29.0429,
+        "pool_size": 73
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00113",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00113",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00113",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.8__hg1.0__sd208",
+        "psnr": 28.6478,
+        "pool_size": 73
+      }
+    },
+    {
+      "source": "nvs/re10k128_50f__ncf2/sample_00118",
+      "status": "included",
+      "id": "re10k128_50f__ncf2-sample_00118",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k128_50f",
+        "ncf": "ncf2",
+        "sample": "sample_00118",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.5__hg1.0__sd72",
+        "psnr": 28.8383,
+        "pool_size": 73
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf1/sample_00002",
+      "status": "included",
+      "id": "re10k_c50__ncf1-sample_00002",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf1",
+        "sample": "sample_00002",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.8__hg3.0__sd50__st60",
+        "psnr": 23.1443,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf1/sample_00005",
+      "status": "included",
+      "id": "re10k_c50__ncf1-sample_00005",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf1",
+        "sample": "sample_00005",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.5__sd70__st60",
+        "psnr": 24.1012,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf1/sample_00006",
+      "status": "included",
+      "id": "re10k_c50__ncf1-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf1",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.0__sd70__st60",
+        "psnr": 24.3943,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf1/sample_00007",
+      "status": "included",
+      "id": "re10k_c50__ncf1-sample_00007",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf1",
+        "sample": "sample_00007",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg3.0__sd70__st60",
+        "psnr": 27.6377,
+        "pool_size": 86
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00000",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00000",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00000",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.2__hg1.5__sd604",
+        "psnr": 24.1589,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00002",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00002",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00002",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.5__sd603",
+        "psnr": 26.1118,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00004",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00004",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00004",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd705",
+        "psnr": 24.6336,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00005",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00005",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00005",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.0__sd603",
+        "psnr": 27.2344,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00006",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.5__sd603",
+        "psnr": 29.5209,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00007",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00007",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00007",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd703__st60",
+        "psnr": 30.3126,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00008",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00008",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00008",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd703__st60",
+        "psnr": 26.4143,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/re10k_c50__ncf2/sample_00009",
+      "status": "included",
+      "id": "re10k_c50__ncf2-sample_00009",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "re10k_c50",
+        "ncf": "ncf2",
+        "sample": "sample_00009",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.1__hg1.0__sd600",
+        "psnr": 25.0456,
+        "pool_size": 79
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf1/sample_00000",
+      "status": "included",
+      "id": "spatialvid__ncf1-sample_00000",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf1",
+        "sample": "sample_00000",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.2__hg3.0__sd52",
+        "psnr": 15.2535,
+        "pool_size": 78
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf1/sample_00001",
+      "status": "included",
+      "id": "spatialvid__ncf1-sample_00001",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf1",
+        "sample": "sample_00001",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.7__hg1.0__sd70__st60",
+        "psnr": 21.1113,
+        "pool_size": 77
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf1/sample_00005",
+      "status": "included",
+      "id": "spatialvid__ncf1-sample_00005",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf1",
+        "sample": "sample_00005",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd50",
+        "psnr": 14.9936,
+        "pool_size": 77
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf1/sample_00006",
+      "status": "included",
+      "id": "spatialvid__ncf1-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf1",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.2__hg0.5__sd700",
+        "psnr": 17.9178,
+        "pool_size": 78
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00000",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00000",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00000",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd703__st60",
+        "psnr": 17.4297,
+        "pool_size": 85
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00001",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00001",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00001",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd703__st60",
+        "psnr": 23.4543,
+        "pool_size": 85
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00002",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00002",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00002",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.0__sd70__st60",
+        "psnr": 16.813,
+        "pool_size": 84
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00003",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00003",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00003",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg2.0",
+        "psnr": 14.997,
+        "pool_size": 85
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00004",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00004",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00004",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg3.0__sd4",
+        "psnr": 16.2236,
+        "pool_size": 85
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00005",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00005",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00005",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg1.5__sd705",
+        "psnr": 16.012,
+        "pool_size": 85
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00006",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00006",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00006",
+        "checkpoint": "spdepth@2250",
+        "config": "s1.0__hg4.0__sd30",
+        "psnr": 18.484,
+        "pool_size": 84
+      }
+    },
+    {
+      "source": "nvs/spatialvid__ncf2/sample_00007",
+      "status": "included",
+      "id": "spatialvid__ncf2-sample_00007",
+      "metrics": {
+        "task": "nvs",
+        "dataset": "spatialvid",
+        "ncf": "ncf2",
+        "sample": "sample_00007",
+        "checkpoint": "spdepth@2250",
+        "config": "s0.9__hg1.0__sd300",
+        "psnr": 18.0661,
+        "pool_size": 85
+      }
+    },
+    {
+      "source": "depth/bonn/rgbd_bonn_balloon2",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_balloon2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_balloon2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st25",
+        "abs_rel": 0.059226,
+        "delta1": 0.972274,
+        "pool_size": 27,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.097000002861023,
+          3.7739999294281006
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7911826019910656,
+          "shift": 0.6036934892066139,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/bonn/rgbd_bonn_crowd2",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_crowd2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_crowd2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg0.5_st60",
+        "abs_rel": 0.08351,
+        "delta1": 0.968386,
+        "pool_size": 27,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.6060000061988831,
+          3.947999954223633
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.630426382537671,
+          "shift": 0.3641829096122521,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/bonn/rgbd_bonn_crowd3",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_crowd3",
+      "metrics": {
+        "task": "depth",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_crowd3",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg0.5_st25",
+        "abs_rel": 0.052224,
+        "delta1": 0.963151,
+        "pool_size": 27,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.6710000038146973,
+          3.8589999675750732
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.5532952365037819,
+          "shift": 0.8586801828908874,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/bonn/rgbd_bonn_person_tracking2",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_person_tracking2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_person_tracking2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st60",
+        "abs_rel": 0.043399,
+        "delta1": 0.973622,
+        "pool_size": 27,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.5859999656677246,
+          3.815999984741211
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7115571506579974,
+          "shift": 0.7312435265342926,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/bonn/rgbd_bonn_synchronous",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_synchronous",
+      "metrics": {
+        "task": "depth",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_synchronous",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg0.5_st25",
+        "abs_rel": 0.053802,
+        "delta1": 0.971537,
+        "pool_size": 27,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.1230000257492065,
+          3.23799991607666
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.551609390258798,
+          "shift": 0.4997320562861424,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0002_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0002_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0002_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "abs_rel": 0.076783,
+        "delta1": 0.949219,
+        "pool_size": 11,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.49609375,
+          52.2890625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 26.63637055162934,
+          "shift": 1.3931560028193377,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0005_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0005_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0005_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "abs_rel": 0.100537,
+        "delta1": 0.915458,
+        "pool_size": 11,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.37109375,
+          51.61328125
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 10.66133555174352,
+          "shift": 2.6860535037167157,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0013_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0013_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0013_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "abs_rel": 0.089306,
+        "delta1": 0.9633,
+        "pool_size": 11,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.39453125,
+          67.140625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 23.844267890255562,
+          "shift": 1.1589447122070413,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0020_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0020_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0020_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.5_st40",
+        "abs_rel": 0.120628,
+        "delta1": 0.905037,
+        "pool_size": 11,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          5.98046875,
+          69.7890625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 6.884416953639232,
+          "shift": 1.7560224252994279,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0023_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0023_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0023_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "abs_rel": 0.067536,
+        "delta1": 0.978365,
+        "pool_size": 11,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.296875,
+          57.75
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 13.510559034126096,
+          "shift": 1.650389181330294,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0036_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0036_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0036_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st60",
+        "abs_rel": 0.071467,
+        "delta1": 0.979938,
+        "pool_size": 11,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.30078125,
+          57.1015625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 17.411367759699136,
+          "shift": 0.11347765233482054,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0079_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0079_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0079_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.0_st60",
+        "abs_rel": 0.08682,
+        "delta1": 0.957342,
+        "pool_size": 11,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.25390625,
+          68.16796875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 9.353055742313932,
+          "shift": 2.233393989093699,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0095_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0095_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0095_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st60",
+        "abs_rel": 0.036766,
+        "delta1": 0.991417,
+        "pool_size": 10,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.37890625,
+          57.69921875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 23.426187964764576,
+          "shift": 0.34470307719854326,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_26_drive_0113_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_26_drive_0113_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_26_drive_0113_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.0_st60",
+        "abs_rel": 0.07609,
+        "delta1": 0.958427,
+        "pool_size": 10,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          5.63671875,
+          47.42578125
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 7.763979726336078,
+          "shift": -0.7862078203058835,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_28_drive_0037_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_28_drive_0037_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_28_drive_0037_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st40",
+        "abs_rel": 0.084981,
+        "delta1": 0.929113,
+        "pool_size": 10,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.0390625,
+          52.94140625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 3.683854944502139,
+          "shift": 1.8036934838994554,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_29_drive_0026_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_29_drive_0026_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_29_drive_0026_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.0_st60",
+        "abs_rel": 0.044852,
+        "delta1": 0.983867,
+        "pool_size": 10,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.14453125,
+          45.6015625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 4.941255006606108,
+          "shift": 0.3077209308991957,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_09_30_drive_0016_sync_02",
+      "status": "included",
+      "id": "kitti-2011_09_30_drive_0016_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_09_30_drive_0016_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.5_st60",
+        "abs_rel": 0.04692,
+        "delta1": 0.984361,
+        "pool_size": 10,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.26171875,
+          62.046875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 27.348363474070823,
+          "shift": 0.06180456921271537,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/kitti/2011_10_03_drive_0047_sync_02",
+      "status": "included",
+      "id": "kitti-2011_10_03_drive_0047_sync_02",
+      "metrics": {
+        "task": "depth",
+        "dataset": "kitti",
+        "protocol": "dense (contig_first)",
+        "scene": "2011_10_03_drive_0047_sync_02",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.5_st40",
+        "abs_rel": 0.069292,
+        "delta1": 0.948603,
+        "pool_size": 10,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.39453125,
+          57.830078125
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 7.132808019257112,
+          "shift": 0.7026530546549298,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_0",
+      "status": "included",
+      "id": "scannetpp-scene_0",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_0",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st40",
+        "abs_rel": 0.06643,
+        "delta1": 0.96055,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.6528862714767456,
+          2.1536457538604736
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.1140395255790443,
+          "shift": 0.18621347704682223,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_1",
+      "status": "included",
+      "id": "scannetpp-scene_1",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_1",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd77_st40",
+        "abs_rel": 0.080771,
+        "delta1": 0.93145,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.4701334536075592,
+          3.2220053672790527
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.5278601392878164,
+          "shift": 0.2108213480459324,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_10",
+      "status": "included",
+      "id": "scannetpp-scene_10",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_10",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st60",
+        "abs_rel": 0.060702,
+        "delta1": 0.972585,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.560384213924408,
+          1.9903429746627808
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.8215007983684263,
+          "shift": 0.12467690752257586,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_11",
+      "status": "included",
+      "id": "scannetpp-scene_11",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_11",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd81_st60",
+        "abs_rel": 0.037983,
+        "delta1": 0.995458,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.6223958730697632,
+          1.4482421875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.29692716030155,
+          "shift": 0.07613960850427434,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_13",
+      "status": "included",
+      "id": "scannetpp-scene_13",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_13",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd84_st60",
+        "abs_rel": 0.064851,
+        "delta1": 0.98836,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.8981119394302368,
+          3.2610676288604736
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.1194176596821868,
+          "shift": 0.10921203653079863,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_14",
+      "status": "included",
+      "id": "scannetpp-scene_14",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_14",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd84_st40",
+        "abs_rel": 0.070931,
+        "delta1": 0.96628,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.5984700918197632,
+          2.337890625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.131413688326632,
+          "shift": 0.15332425808040095,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_17",
+      "status": "included",
+      "id": "scannetpp-scene_17",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_17",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd88_st40",
+        "abs_rel": 0.082017,
+        "delta1": 0.944459,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.7745767831802368,
+          8.065104484558105
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.644035833456655,
+          "shift": 0.17460735814838546,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_18",
+      "status": "included",
+      "id": "scannetpp-scene_18",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_18",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd84_st60",
+        "abs_rel": 0.044669,
+        "delta1": 0.977508,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.84130859375,
+          3.6419270038604736
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.0820551804009557,
+          "shift": 0.13294333620769716,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_19",
+      "status": "included",
+      "id": "scannetpp-scene_19",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_19",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd82_st60",
+        "abs_rel": 0.03801,
+        "delta1": 0.99147,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.8899196982383728,
+          2.139756917953491
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.3301995555331316,
+          "shift": 0.21059504852387972,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_2",
+      "status": "included",
+      "id": "scannetpp-scene_2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_2",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd75_st60",
+        "abs_rel": 0.068661,
+        "delta1": 0.979266,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.91943359375,
+          2.546875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.037362335778147,
+          "shift": 0.04560550018332086,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_20",
+      "status": "included",
+      "id": "scannetpp-scene_20",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_20",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd89_st60",
+        "abs_rel": 0.043705,
+        "delta1": 0.968252,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.57275390625,
+          1.9671224355697632
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7429685794164581,
+          "shift": 0.13455980228815062,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_21",
+      "status": "included",
+      "id": "scannetpp-scene_21",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_21",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st60",
+        "abs_rel": 0.085295,
+        "delta1": 0.944225,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.5004340410232544,
+          3.3333332538604736
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.8351209794126412,
+          "shift": 0.14086053664916043,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_22",
+      "status": "included",
+      "id": "scannetpp-scene_22",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_22",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd92_st60",
+        "abs_rel": 0.04887,
+        "delta1": 0.98267,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.2353515625,
+          4.33203125
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.3315387277309767,
+          "shift": 0.36863313478033743,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_24",
+      "status": "included",
+      "id": "scannetpp-scene_24",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_24",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd77_st40",
+        "abs_rel": 0.047353,
+        "delta1": 0.97892,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.7425130009651184,
+          3.123046875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.0096923943910858,
+          "shift": -0.017829440960932502,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_25",
+      "status": "included",
+      "id": "scannetpp-scene_25",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_25",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd90_st60",
+        "abs_rel": 0.048992,
+        "delta1": 0.983644,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.9523112177848816,
+          2.9348957538604736
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.1171674630114388,
+          "shift": 0.2639825740620247,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_26",
+      "status": "included",
+      "id": "scannetpp-scene_26",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_26",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd78_st40",
+        "abs_rel": 0.074908,
+        "delta1": 0.971421,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.6240233182907104,
+          2.7513022422790527
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.8891487138237149,
+          "shift": -0.009109927487983104,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_27",
+      "status": "included",
+      "id": "scannetpp-scene_27",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_27",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd88_st60",
+        "abs_rel": 0.04683,
+        "delta1": 0.983569,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.85107421875,
+          3.958984375
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7691869152912674,
+          "shift": 0.2890035208013316,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_29",
+      "status": "included",
+      "id": "scannetpp-scene_29",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_29",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd89_st40",
+        "abs_rel": 0.062012,
+        "delta1": 0.981512,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.9057616591453552,
+          3.998046875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.0341710589345476,
+          "shift": 0.13297301182346283,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_3",
+      "status": "included",
+      "id": "scannetpp-scene_3",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_3",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd85_st40",
+        "abs_rel": 0.046133,
+        "delta1": 0.993518,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.90625,
+          4.52647590637207
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.877913436067993,
+          "shift": 0.31155400389743837,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_30",
+      "status": "included",
+      "id": "scannetpp-scene_30",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_30",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd85_st60",
+        "abs_rel": 0.066279,
+        "delta1": 0.973716,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.5203450322151184,
+          3.185546875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.6353138197987825,
+          "shift": 0.1644188221050253,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_31",
+      "status": "included",
+      "id": "scannetpp-scene_31",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_31",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd94_st40",
+        "abs_rel": 0.071942,
+        "delta1": 0.963082,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.44091796875,
+          2.46484375
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7889346292882625,
+          "shift": 0.06553670123103826,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_32",
+      "status": "included",
+      "id": "scannetpp-scene_32",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_32",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd89_st60",
+        "abs_rel": 0.035927,
+        "delta1": 0.999334,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.6085612177848816,
+          3.214843988418579
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 2.136629494547909,
+          "shift": 0.12131421891248716,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_33",
+      "status": "included",
+      "id": "scannetpp-scene_33",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_33",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st60",
+        "abs_rel": 0.087115,
+        "delta1": 0.931243,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.435302734375,
+          2.9192709922790527
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.0249636349108746,
+          "shift": 0.03588722099153693,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_34",
+      "status": "included",
+      "id": "scannetpp-scene_34",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_34",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd95_st60",
+        "abs_rel": 0.077859,
+        "delta1": 0.951639,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.52685546875,
+          2.2005209922790527
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.6523111493910355,
+          "shift": 0.24448459271501707,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_35",
+      "status": "included",
+      "id": "scannetpp-scene_35",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_35",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st60",
+        "abs_rel": 0.048065,
+        "delta1": 0.995968,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.5375434160232544,
+          2.500434160232544
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.5709489335640838,
+          "shift": 0.2637103057723849,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_36",
+      "status": "included",
+      "id": "scannetpp-scene_36",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_36",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd91_st40",
+        "abs_rel": 0.04033,
+        "delta1": 0.99061,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.6819660663604736,
+          2.4108073711395264
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.709494167450545,
+          "shift": 0.14624470965135491,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_37",
+      "status": "included",
+      "id": "scannetpp-scene_37",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_37",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd76_st40",
+        "abs_rel": 0.075013,
+        "delta1": 0.944054,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.64794921875,
+          6.94140625
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.3859774121055766,
+          "shift": 0.17340854650659385,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_38",
+      "status": "included",
+      "id": "scannetpp-scene_38",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_38",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd82_st40",
+        "abs_rel": 0.072052,
+        "delta1": 0.953652,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.8095703125,
+          9.634564399719238
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.7274986477311038,
+          "shift": -0.02088300979341445,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_4",
+      "status": "included",
+      "id": "scannetpp-scene_4",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_4",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd92_st60",
+        "abs_rel": 0.053177,
+        "delta1": 0.979236,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.4860025644302368,
+          6.831597328186035
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 3.0283352438892983,
+          "shift": 0.3052952411819063,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_40",
+      "status": "included",
+      "id": "scannetpp-scene_40",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_40",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd84_st60",
+        "abs_rel": 0.057742,
+        "delta1": 0.972474,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.81494140625,
+          2.4811198711395264
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.0213302758781455,
+          "shift": 0.19217234924030993,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_41",
+      "status": "included",
+      "id": "scannetpp-scene_41",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_41",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd94_st40",
+        "abs_rel": 0.074621,
+        "delta1": 0.958747,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.5904947519302368,
+          1.8466793298721313
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.9388962075148168,
+          "shift": 0.25040979998082036,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_43",
+      "status": "included",
+      "id": "scannetpp-scene_43",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_43",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd93_st60",
+        "abs_rel": 0.05253,
+        "delta1": 0.978407,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.0445963144302368,
+          4.019965171813965
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.1187116066136533,
+          "shift": 0.24155759217459868,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_44",
+      "status": "included",
+      "id": "scannetpp-scene_44",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_44",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd74_st40",
+        "abs_rel": 0.031165,
+        "delta1": 0.990977,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.262912631034851,
+          3.0638017654418945
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.1647808308703242,
+          "shift": 0.046246472698028306,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_45",
+      "status": "included",
+      "id": "scannetpp-scene_45",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_45",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd79_st60",
+        "abs_rel": 0.088421,
+        "delta1": 0.924839,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.7747396230697632,
+          2.778211832046509
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.339142628082534,
+          "shift": 0.09479468576597469,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_46",
+      "status": "included",
+      "id": "scannetpp-scene_46",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_46",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd75_st60",
+        "abs_rel": 0.049195,
+        "delta1": 0.97112,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.4346789121627808,
+          6.0546875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.9733598414460048,
+          "shift": 0.4118522159825336,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_47",
+      "status": "included",
+      "id": "scannetpp-scene_47",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_47",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd81_st60",
+        "abs_rel": 0.076435,
+        "delta1": 0.943435,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.2413601279258728,
+          1.2731119394302368
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7216772397334741,
+          "shift": 0.054131486227475094,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_5",
+      "status": "included",
+      "id": "scannetpp-scene_5",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_5",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd75_st60",
+        "abs_rel": 0.062326,
+        "delta1": 0.961104,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.80322265625,
+          3.7317707538604736
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 2.385975461253728,
+          "shift": 0.16191854838384856,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_6",
+      "status": "included",
+      "id": "scannetpp-scene_6",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_6",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd76_st60",
+        "abs_rel": 0.089562,
+        "delta1": 0.967605,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.298095703125,
+          1.185546875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.6690739753020132,
+          "shift": 0.02625439674983411,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_7",
+      "status": "included",
+      "id": "scannetpp-scene_7",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_7",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd87_st40",
+        "abs_rel": 0.046231,
+        "delta1": 0.965894,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.240234375,
+          2.780381679534912
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7751637122531867,
+          "shift": 0.2707143161042368,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/scannetpp/scene_9",
+      "status": "included",
+      "id": "scannetpp-scene_9",
+      "metrics": {
+        "task": "depth",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_9",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd77_st60",
+        "abs_rel": 0.039058,
+        "delta1": 0.984191,
+        "pool_size": 88,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.029296875,
+          2.921875
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.110708003773826,
+          "shift": 0.22965011258656012,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            288,
+            384
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/alley_2",
+      "status": "included",
+      "id": "sintel-alley_2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "alley_2",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd410",
+        "abs_rel": 0.073569,
+        "delta1": 0.917741,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          3.093688726425171,
+          35.9416389465332
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 2.2212723406343478,
+          "shift": -0.1518011020359622,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/ambush_4",
+      "status": "included",
+      "id": "sintel-ambush_4",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "ambush_4",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st60",
+        "abs_rel": 0.339248,
+        "delta1": 0.476269,
+        "pool_size": 12,
+        "n_frames": 30,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.4034406542778015,
+          9.197397232055664
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.9868822709199238,
+          "shift": 1.0446331116426029,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/ambush_5",
+      "status": "included",
+      "id": "sintel-ambush_5",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "ambush_5",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd407",
+        "abs_rel": 0.404922,
+        "delta1": 0.655341,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.0181254148483276,
+          64.82107543945312
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.3214102992135698,
+          "shift": 1.2745871348273767,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/ambush_6",
+      "status": "included",
+      "id": "sintel-ambush_6",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "ambush_6",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "abs_rel": 0.300879,
+        "delta1": 0.437896,
+        "pool_size": 12,
+        "n_frames": 18,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.4124085307121277,
+          4.188856601715088
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.10916724621309606,
+          "shift": 0.7433353122957982,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/cave_2",
+      "status": "included",
+      "id": "sintel-cave_2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "cave_2",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd415",
+        "abs_rel": 0.572883,
+        "delta1": 0.243553,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.6835891008377075,
+          63.503780364990234
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 10.008296039338985,
+          "shift": -0.9650476499830964,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/cave_4",
+      "status": "included",
+      "id": "sintel-cave_4",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "cave_4",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.0_st40",
+        "abs_rel": 0.298788,
+        "delta1": 0.536002,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.5098679065704346,
+          19.599102020263672
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.736027597914651,
+          "shift": 2.713953689172134,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/market_2",
+      "status": "included",
+      "id": "sintel-market_2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "market_2",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd405",
+        "abs_rel": 0.131401,
+        "delta1": 0.869109,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          6.5603485107421875,
+          66.69265747070312
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 1.1571809400475808,
+          "shift": 6.618787370628929,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/market_5",
+      "status": "included",
+      "id": "sintel-market_5",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "market_5",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.5_st60",
+        "abs_rel": 0.299669,
+        "delta1": 0.611899,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.49648770689964294,
+          13.602693557739258
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 5.5635979699800995,
+          "shift": 0.7816785416450746,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/market_6",
+      "status": "included",
+      "id": "sintel-market_6",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "market_6",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.5_st40",
+        "abs_rel": 0.647394,
+        "delta1": 0.358636,
+        "pool_size": 12,
+        "n_frames": 38,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.5675879120826721,
+          45.87295150756836
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.7613123937964693,
+          "shift": 2.625715137713193,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/shaman_3",
+      "status": "included",
+      "id": "sintel-shaman_3",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "shaman_3",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd415",
+        "abs_rel": 0.112011,
+        "delta1": 0.931964,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.2803124487400055,
+          0.7330557703971863
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.14973948908027165,
+          "shift": 0.19008449890081233,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/sleeping_1",
+      "status": "included",
+      "id": "sintel-sleeping_1",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "sleeping_1",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "abs_rel": 0.069987,
+        "delta1": 0.976656,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          0.5852944254875183,
+          1.0524228811264038
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.23421410997228104,
+          "shift": 0.30610069875053697,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/sleeping_2",
+      "status": "included",
+      "id": "sintel-sleeping_2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "sleeping_2",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd403",
+        "abs_rel": 0.061293,
+        "delta1": 0.98713,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.2557429075241089,
+          3.279494047164917
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 0.8969776888792911,
+          "shift": 0.45177793451826115,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/temple_2",
+      "status": "included",
+      "id": "sintel-temple_2",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "temple_2",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd414",
+        "abs_rel": 0.362486,
+        "delta1": 0.875768,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          1.1381127834320068,
+          21.06993293762207
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 6.655993445859632,
+          "shift": 3.568329965295903,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "depth/sintel/temple_3",
+      "status": "included",
+      "id": "sintel-temple_3",
+      "metrics": {
+        "task": "depth",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "temple_3",
+        "checkpoint": "spdepth@2250",
+        "member": "pool16_sd401",
+        "abs_rel": 0.593052,
+        "delta1": 0.407135,
+        "pool_size": 28,
+        "n_frames": 50,
+        "decode_percentile_clip": 2.0,
+        "depth_colour_range_m": [
+          2.0260732173919678,
+          21.710147857666016
+        ],
+        "align": {
+          "method": "lads (L1-robust affine, IRLS)",
+          "scale": 33.895040556316594,
+          "shift": 1.4079327830076545,
+          "percentile_clip": 2.0,
+          "fit_resolution": [
+            240,
+            320
+          ],
+          "pred_native_resolution": [
+            288,
+            384
+          ],
+          "recipe": "rel = decode_depth(pred_depth_norm.npy, percentile_clip); resize rel to fit_resolution (INTER_NEAREST); metric_depth = scale*rel + shift   # metres"
+        }
+      }
+    },
+    {
+      "source": "pose/bonn/rgbd_bonn_balloon2",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_balloon2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_balloon2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg0.5_st60",
+        "ate_m": 0.012647,
+        "pool_size": 27,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/bonn/rgbd_bonn_crowd2",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_crowd2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_crowd2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg0.5_st25",
+        "ate_m": 0.00731,
+        "pool_size": 27,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/bonn/rgbd_bonn_crowd3",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_crowd3",
+      "metrics": {
+        "task": "pose",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_crowd3",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg0.5_st25",
+        "ate_m": 0.004532,
+        "pool_size": 27,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/bonn/rgbd_bonn_person_tracking2",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_person_tracking2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_person_tracking2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg0.5_st60",
+        "ate_m": 0.010269,
+        "pool_size": 27,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/bonn/rgbd_bonn_synchronous",
+      "status": "included",
+      "id": "bonn-rgbd_bonn_synchronous",
+      "metrics": {
+        "task": "pose",
+        "dataset": "bonn",
+        "protocol": "dense (contig_first)",
+        "scene": "rgbd_bonn_synchronous",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg0.5_st60",
+        "ate_m": 0.00121,
+        "pool_size": 27,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_0",
+      "status": "included",
+      "id": "scannetpp-scene_0",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_0",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd75_st40",
+        "ate_m": 0.076906,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_1",
+      "status": "included",
+      "id": "scannetpp-scene_1",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_1",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd93_st40",
+        "ate_m": 0.063213,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_10",
+      "status": "included",
+      "id": "scannetpp-scene_10",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_10",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd75_st60",
+        "ate_m": 0.048055,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_11",
+      "status": "included",
+      "id": "scannetpp-scene_11",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_11",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd88_st40",
+        "ate_m": 0.064775,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_12",
+      "status": "included",
+      "id": "scannetpp-scene_12",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_12",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd75_st60",
+        "ate_m": 0.061792,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_13",
+      "status": "included",
+      "id": "scannetpp-scene_13",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_13",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd76_st40",
+        "ate_m": 0.075384,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_14",
+      "status": "included",
+      "id": "scannetpp-scene_14",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_14",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd81_st60",
+        "ate_m": 0.104116,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_15",
+      "status": "included",
+      "id": "scannetpp-scene_15",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_15",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd91_st40",
+        "ate_m": 0.109359,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_16",
+      "status": "included",
+      "id": "scannetpp-scene_16",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_16",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd83_st60",
+        "ate_m": 0.048275,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_17",
+      "status": "included",
+      "id": "scannetpp-scene_17",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_17",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd77_st40",
+        "ate_m": 0.052725,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_18",
+      "status": "included",
+      "id": "scannetpp-scene_18",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_18",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st40",
+        "ate_m": 0.046262,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_19",
+      "status": "included",
+      "id": "scannetpp-scene_19",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_19",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd81_st40",
+        "ate_m": 0.113951,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_2",
+      "status": "included",
+      "id": "scannetpp-scene_2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_2",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd85_st40",
+        "ate_m": 0.055595,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_20",
+      "status": "included",
+      "id": "scannetpp-scene_20",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_20",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd77_st60",
+        "ate_m": 0.07832,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_21",
+      "status": "included",
+      "id": "scannetpp-scene_21",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_21",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd88_st40",
+        "ate_m": 0.116998,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_22",
+      "status": "included",
+      "id": "scannetpp-scene_22",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_22",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st40",
+        "ate_m": 0.079109,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_23",
+      "status": "included",
+      "id": "scannetpp-scene_23",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_23",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd78_st60",
+        "ate_m": 0.095405,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_24",
+      "status": "included",
+      "id": "scannetpp-scene_24",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_24",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd94_st40",
+        "ate_m": 0.020005,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_25",
+      "status": "included",
+      "id": "scannetpp-scene_25",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_25",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd79_st40",
+        "ate_m": 0.060703,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_26",
+      "status": "included",
+      "id": "scannetpp-scene_26",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_26",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd75_st60",
+        "ate_m": 0.086687,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_27",
+      "status": "included",
+      "id": "scannetpp-scene_27",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_27",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd90_st60",
+        "ate_m": 0.082442,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_28",
+      "status": "included",
+      "id": "scannetpp-scene_28",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_28",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd79_st40",
+        "ate_m": 0.199537,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_29",
+      "status": "included",
+      "id": "scannetpp-scene_29",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_29",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd76_st60",
+        "ate_m": 0.020754,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_3",
+      "status": "included",
+      "id": "scannetpp-scene_3",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_3",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd76_st60",
+        "ate_m": 0.044199,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_30",
+      "status": "included",
+      "id": "scannetpp-scene_30",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_30",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd86_st40",
+        "ate_m": 0.052866,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_31",
+      "status": "included",
+      "id": "scannetpp-scene_31",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_31",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd92_st40",
+        "ate_m": 0.101997,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_32",
+      "status": "included",
+      "id": "scannetpp-scene_32",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_32",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd86_st40",
+        "ate_m": 0.055181,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_33",
+      "status": "included",
+      "id": "scannetpp-scene_33",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_33",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd90_st40",
+        "ate_m": 0.057913,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_34",
+      "status": "included",
+      "id": "scannetpp-scene_34",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_34",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd76_st60",
+        "ate_m": 0.133315,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_35",
+      "status": "included",
+      "id": "scannetpp-scene_35",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_35",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd76_st40",
+        "ate_m": 0.037354,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_36",
+      "status": "included",
+      "id": "scannetpp-scene_36",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_36",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd95_st60",
+        "ate_m": 0.064715,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_37",
+      "status": "included",
+      "id": "scannetpp-scene_37",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_37",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd82_st60",
+        "ate_m": 0.071911,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_38",
+      "status": "included",
+      "id": "scannetpp-scene_38",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_38",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd84_st60",
+        "ate_m": 0.143916,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_39",
+      "status": "included",
+      "id": "scannetpp-scene_39",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_39",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd81_st40",
+        "ate_m": 0.093302,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_4",
+      "status": "included",
+      "id": "scannetpp-scene_4",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_4",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd89_st60",
+        "ate_m": 0.08982,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_40",
+      "status": "included",
+      "id": "scannetpp-scene_40",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_40",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd89_st40",
+        "ate_m": 0.062294,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_41",
+      "status": "included",
+      "id": "scannetpp-scene_41",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_41",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd87_st60",
+        "ate_m": 0.051799,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_42",
+      "status": "included",
+      "id": "scannetpp-scene_42",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_42",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd86_st40",
+        "ate_m": 0.062859,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_43",
+      "status": "included",
+      "id": "scannetpp-scene_43",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_43",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd88_st40",
+        "ate_m": 0.062098,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_44",
+      "status": "included",
+      "id": "scannetpp-scene_44",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_44",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd94_st60",
+        "ate_m": 0.066981,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_45",
+      "status": "included",
+      "id": "scannetpp-scene_45",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_45",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd79_st40",
+        "ate_m": 0.04186,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_46",
+      "status": "included",
+      "id": "scannetpp-scene_46",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_46",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd80_st60",
+        "ate_m": 0.04323,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_47",
+      "status": "included",
+      "id": "scannetpp-scene_47",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_47",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd77_st60",
+        "ate_m": 0.054427,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_5",
+      "status": "included",
+      "id": "scannetpp-scene_5",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_5",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd84_st40",
+        "ate_m": 0.146469,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_6",
+      "status": "included",
+      "id": "scannetpp-scene_6",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_6",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd93_st40",
+        "ate_m": 0.029434,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_7",
+      "status": "included",
+      "id": "scannetpp-scene_7",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_7",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd94_st40",
+        "ate_m": 0.045873,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_8",
+      "status": "included",
+      "id": "scannetpp-scene_8",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_8",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd95_st40",
+        "ate_m": 0.024041,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/scannetpp/scene_9",
+      "status": "included",
+      "id": "scannetpp-scene_9",
+      "metrics": {
+        "task": "pose",
+        "dataset": "scannetpp",
+        "protocol": "dense (contig_first)",
+        "scene": "scene_9",
+        "checkpoint": "spdepth@2250",
+        "member": "hedge_spdepth_2250_sd92_st40",
+        "ate_m": 0.057736,
+        "pool_size": 44,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/alley_2",
+      "status": "included",
+      "id": "sintel-alley_2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "alley_2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st40",
+        "ate_m": 0.013744,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/ambush_5",
+      "status": "included",
+      "id": "sintel-ambush_5",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "ambush_5",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st40",
+        "ate_m": 0.020124,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/ambush_6",
+      "status": "included",
+      "id": "sintel-ambush_6",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "ambush_6",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "ate_m": 0.09088,
+        "pool_size": 12,
+        "n_frames": 18,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/cave_2",
+      "status": "included",
+      "id": "sintel-cave_2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "cave_2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.5_st60",
+        "ate_m": 0.342664,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/cave_4",
+      "status": "included",
+      "id": "sintel-cave_4",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "cave_4",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.5_st40",
+        "ate_m": 0.017766,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/market_2",
+      "status": "included",
+      "id": "sintel-market_2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "market_2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.0_st60",
+        "ate_m": 0.006015,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/market_5",
+      "status": "included",
+      "id": "sintel-market_5",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "market_5",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st40",
+        "ate_m": 0.162477,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/market_6",
+      "status": "included",
+      "id": "sintel-market_6",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "market_6",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd402_hg1.5_st60",
+        "ate_m": 0.031422,
+        "pool_size": 12,
+        "n_frames": 38,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/shaman_3",
+      "status": "included",
+      "id": "sintel-shaman_3",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "shaman_3",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd400_hg1.0_st60",
+        "ate_m": 0.003129,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/sleeping_1",
+      "status": "included",
+      "id": "sintel-sleeping_1",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "sleeping_1",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st40",
+        "ate_m": 0.010993,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/sleeping_2",
+      "status": "included",
+      "id": "sintel-sleeping_2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "sleeping_2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st40",
+        "ate_m": 0.006113,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/temple_2",
+      "status": "included",
+      "id": "sintel-temple_2",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "temple_2",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st40",
+        "ate_m": 0.106616,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    },
+    {
+      "source": "pose/sintel/temple_3",
+      "status": "included",
+      "id": "sintel-temple_3",
+      "metrics": {
+        "task": "pose",
+        "dataset": "sintel",
+        "protocol": "dense (contig_first)",
+        "scene": "temple_3",
+        "checkpoint": "spdepth@2250",
+        "member": "rel2250_sd401_hg1.0_st60",
+        "ate_m": 0.191376,
+        "pool_size": 12,
+        "n_frames": 50,
+        "alignment": "sim3 Umeyama (scale+R+t) on camera centres"
+      }
+    }
+  ],
+  "nvs_camera_source": "Original target cameras beside the symlinked release RGB videos.",
+  "rgb_recovery": [
+    {
+      "source": "depth/scannetpp/scene_0",
+      "sample": "sample_00000",
+      "rotation_error": 5.364418029785156e-07,
+      "center_error": 0.0003154856125577865,
+      "scale": 0.05655213204415494
+    },
+    {
+      "source": "depth/scannetpp/scene_1",
+      "sample": "sample_00001",
+      "rotation_error": 3.1556690438527824e-07,
+      "center_error": 8.088767133407337e-05,
+      "scale": 0.043842892594160285
+    },
+    {
+      "source": "depth/scannetpp/scene_10",
+      "sample": "sample_00010",
+      "rotation_error": 4.1959491614562694e-07,
+      "center_error": 0.00011542713715245734,
+      "scale": 0.05541646927718621
+    },
+    {
+      "source": "depth/scannetpp/scene_11",
+      "sample": "sample_00011",
+      "rotation_error": 4.1584208965161906e-07,
+      "center_error": 0.00021742488372222812,
+      "scale": 0.04626892226495549
+    },
+    {
+      "source": "depth/scannetpp/scene_13",
+      "sample": "sample_00013",
+      "rotation_error": 1.8577817373355288e-07,
+      "center_error": 0.00011228157043291498,
+      "scale": 0.07535990216319158
+    },
+    {
+      "source": "depth/scannetpp/scene_14",
+      "sample": "sample_00014",
+      "rotation_error": 5.960464478649286e-07,
+      "center_error": 0.0001157914237829849,
+      "scale": 0.039539652912758044
+    },
+    {
+      "source": "depth/scannetpp/scene_17",
+      "sample": "sample_00017",
+      "rotation_error": 1.6737672803301962e-07,
+      "center_error": 0.000255793367218482,
+      "scale": 0.05336974252991298
+    },
+    {
+      "source": "depth/scannetpp/scene_18",
+      "sample": "sample_00018",
+      "rotation_error": 1.7881398250985114e-07,
+      "center_error": 0.00015907266784598306,
+      "scale": 0.06658684658712492
+    },
+    {
+      "source": "depth/scannetpp/scene_19",
+      "sample": "sample_00019",
+      "rotation_error": 1.804718342546252e-07,
+      "center_error": 0.0002792041451714772,
+      "scale": 0.05855801438613854
+    },
+    {
+      "source": "depth/scannetpp/scene_2",
+      "sample": "sample_00002",
+      "rotation_error": 6.521820428151415e-07,
+      "center_error": 5.804050921212611e-05,
+      "scale": 0.07151244085925473
+    },
+    {
+      "source": "depth/scannetpp/scene_20",
+      "sample": "sample_00020",
+      "rotation_error": 4.2471825389966966e-07,
+      "center_error": 0.00013023025369646168,
+      "scale": 0.039945739534520776
+    },
+    {
+      "source": "depth/scannetpp/scene_21",
+      "sample": "sample_00021",
+      "rotation_error": 2.9898144204842936e-07,
+      "center_error": 9.530344139535574e-05,
+      "scale": 0.04129750355483684
+    },
+    {
+      "source": "depth/scannetpp/scene_22",
+      "sample": "sample_00022",
+      "rotation_error": 3.6015089643903764e-07,
+      "center_error": 0.00015926486345041457,
+      "scale": 0.1262789442029691
+    },
+    {
+      "source": "depth/scannetpp/scene_24",
+      "sample": "sample_00024",
+      "rotation_error": 6.116053178351066e-07,
+      "center_error": 6.5504527974658e-05,
+      "scale": 0.09244487820860124
+    },
+    {
+      "source": "depth/scannetpp/scene_25",
+      "sample": "sample_00025",
+      "rotation_error": 1.670232120387638e-07,
+      "center_error": 0.00023866113057757765,
+      "scale": 0.070748906755796
+    },
+    {
+      "source": "depth/scannetpp/scene_26",
+      "sample": "sample_00026",
+      "rotation_error": 2.7429718632565603e-07,
+      "center_error": 0.00036214054715782984,
+      "scale": 0.06768704660229255
+    },
+    {
+      "source": "depth/scannetpp/scene_27",
+      "sample": "sample_00027",
+      "rotation_error": 1.9985684696077755e-07,
+      "center_error": 8.887185895961602e-05,
+      "scale": 0.06365858741927831
+    },
+    {
+      "source": "depth/scannetpp/scene_29",
+      "sample": "sample_00029",
+      "rotation_error": 1.4798533104487532e-07,
+      "center_error": 9.46762492018971e-05,
+      "scale": 0.07890394216796334
+    },
+    {
+      "source": "depth/scannetpp/scene_3",
+      "sample": "sample_00003",
+      "rotation_error": 8.383944026801871e-07,
+      "center_error": 0.00045357964945202944,
+      "scale": 0.10507448199977831
+    },
+    {
+      "source": "depth/scannetpp/scene_30",
+      "sample": "sample_00030",
+      "rotation_error": 4.1718646637267653e-07,
+      "center_error": 0.00013137679865893315,
+      "scale": 0.03708307009320388
+    },
+    {
+      "source": "depth/scannetpp/scene_31",
+      "sample": "sample_00031",
+      "rotation_error": 1.4400936287906063e-07,
+      "center_error": 0.00016756515744292821,
+      "scale": 0.030860736004113737
+    },
+    {
+      "source": "depth/scannetpp/scene_32",
+      "sample": "sample_00032",
+      "rotation_error": 2.3249805691794023e-07,
+      "center_error": 0.0006264571676531938,
+      "scale": 0.078925892527008
+    },
+    {
+      "source": "depth/scannetpp/scene_33",
+      "sample": "sample_00033",
+      "rotation_error": 4.7619232379503273e-07,
+      "center_error": 0.0001408319379789802,
+      "scale": 0.05578896382857099
+    },
+    {
+      "source": "depth/scannetpp/scene_34",
+      "sample": "sample_00034",
+      "rotation_error": 1.9123832006862074e-07,
+      "center_error": 0.00015480750240741414,
+      "scale": 0.03915669637890425
+    },
+    {
+      "source": "depth/scannetpp/scene_35",
+      "sample": "sample_00035",
+      "rotation_error": 1.7575900734811967e-07,
+      "center_error": 0.00015853215709626944,
+      "scale": 0.046781433038450636
+    },
+    {
+      "source": "depth/scannetpp/scene_36",
+      "sample": "sample_00036",
+      "rotation_error": 3.0152754504353396e-07,
+      "center_error": 9.678513652289222e-05,
+      "scale": 0.04413624441328274
+    },
+    {
+      "source": "depth/scannetpp/scene_37",
+      "sample": "sample_00037",
+      "rotation_error": 2.949211047598155e-07,
+      "center_error": 0.00029584678137882514,
+      "scale": 0.10213753024331115
+    },
+    {
+      "source": "depth/scannetpp/scene_38",
+      "sample": "sample_00038",
+      "rotation_error": 3.0015445662279205e-07,
+      "center_error": 0.00023078906943003671,
+      "scale": 0.07838534198421004
+    },
+    {
+      "source": "depth/scannetpp/scene_4",
+      "sample": "sample_00004",
+      "rotation_error": 6.649562771521289e-07,
+      "center_error": 0.0009639683930191545,
+      "scale": 0.14609469793577168
+    },
+    {
+      "source": "depth/scannetpp/scene_40",
+      "sample": "sample_00040",
+      "rotation_error": 2.384185791015625e-07,
+      "center_error": 0.00013647344127223904,
+      "scale": 0.06366002087290357
+    },
+    {
+      "source": "depth/scannetpp/scene_41",
+      "sample": "sample_00041",
+      "rotation_error": 5.360889446803796e-07,
+      "center_error": 0.0001999596166653017,
+      "scale": 0.049844937332399065
+    },
+    {
+      "source": "depth/scannetpp/scene_43",
+      "sample": "sample_00043",
+      "rotation_error": 5.389542506728517e-07,
+      "center_error": 0.0001558746302113695,
+      "scale": 0.0785213977140462
+    },
+    {
+      "source": "depth/scannetpp/scene_44",
+      "sample": "sample_00044",
+      "rotation_error": 2.0953092849662625e-07,
+      "center_error": 8.33552964148998e-05,
+      "scale": 0.08087257419224643
+    },
+    {
+      "source": "depth/scannetpp/scene_45",
+      "sample": "sample_00045",
+      "rotation_error": 5.167990831944635e-07,
+      "center_error": 0.0003260485376938571,
+      "scale": 0.06823179786150266
+    },
+    {
+      "source": "depth/scannetpp/scene_46",
+      "sample": "sample_00046",
+      "rotation_error": 3.7278598807866103e-07,
+      "center_error": 0.00017152625893346318,
+      "scale": 0.11581017525783054
+    },
+    {
+      "source": "depth/scannetpp/scene_47",
+      "sample": "sample_00047",
+      "rotation_error": 3.121627990543274e-07,
+      "center_error": 0.00017256563096040844,
+      "scale": 0.03069466413147114
+    },
+    {
+      "source": "depth/scannetpp/scene_5",
+      "sample": "sample_00005",
+      "rotation_error": 2.3924974434930135e-07,
+      "center_error": 0.0006320404047670536,
+      "scale": 0.09262588011889746
+    },
+    {
+      "source": "depth/scannetpp/scene_6",
+      "sample": "sample_00006",
+      "rotation_error": 3.615243288068726e-07,
+      "center_error": 0.00016691169222700017,
+      "scale": 0.0276876779078866
+    },
+    {
+      "source": "depth/scannetpp/scene_7",
+      "sample": "sample_00007",
+      "rotation_error": 3.584976617787561e-07,
+      "center_error": 7.58081542211464e-05,
+      "scale": 0.07285341567240125
+    },
+    {
+      "source": "depth/scannetpp/scene_9",
+      "sample": "sample_00009",
+      "rotation_error": 1.3502527440589773e-07,
+      "center_error": 0.00016350455096322825,
+      "scale": 0.07619158201255645
+    },
+    {
+      "source": "pose/scannetpp/scene_0",
+      "sample": "sample_00000",
+      "rotation_error": 5.364418029785156e-07,
+      "center_error": 0.0003154856125577865,
+      "scale": 0.05655213204415494
+    },
+    {
+      "source": "pose/scannetpp/scene_1",
+      "sample": "sample_00001",
+      "rotation_error": 3.1556690438527824e-07,
+      "center_error": 8.088767133407337e-05,
+      "scale": 0.043842892594160285
+    },
+    {
+      "source": "pose/scannetpp/scene_10",
+      "sample": "sample_00010",
+      "rotation_error": 4.1959491614562694e-07,
+      "center_error": 0.00011542713715245734,
+      "scale": 0.05541646927718621
+    },
+    {
+      "source": "pose/scannetpp/scene_11",
+      "sample": "sample_00011",
+      "rotation_error": 4.1584208965161906e-07,
+      "center_error": 0.00021742488372222812,
+      "scale": 0.04626892226495549
+    },
+    {
+      "source": "pose/scannetpp/scene_12",
+      "sample": "sample_00012",
+      "rotation_error": 2.013394982958161e-07,
+      "center_error": 0.00018822470445356565,
+      "scale": 0.055592148367288444
+    },
+    {
+      "source": "pose/scannetpp/scene_13",
+      "sample": "sample_00013",
+      "rotation_error": 1.8577817373355288e-07,
+      "center_error": 0.00011228157043291498,
+      "scale": 0.07535990216319158
+    },
+    {
+      "source": "pose/scannetpp/scene_14",
+      "sample": "sample_00014",
+      "rotation_error": 5.960464478649286e-07,
+      "center_error": 0.0001157914237829849,
+      "scale": 0.039539652912758044
+    },
+    {
+      "source": "pose/scannetpp/scene_15",
+      "sample": "sample_00015",
+      "rotation_error": 2.694045830864411e-07,
+      "center_error": 0.00027380258700948623,
+      "scale": 0.04969600992467565
+    },
+    {
+      "source": "pose/scannetpp/scene_16",
+      "sample": "sample_00016",
+      "rotation_error": 4.66818329214469e-07,
+      "center_error": 0.00011170178577085688,
+      "scale": 0.052754104742714435
+    },
+    {
+      "source": "pose/scannetpp/scene_17",
+      "sample": "sample_00017",
+      "rotation_error": 1.6737672803301962e-07,
+      "center_error": 0.000255793367218482,
+      "scale": 0.05336974252991298
+    },
+    {
+      "source": "pose/scannetpp/scene_18",
+      "sample": "sample_00018",
+      "rotation_error": 1.7881398250985114e-07,
+      "center_error": 0.00015907266784598306,
+      "scale": 0.06658684658712492
+    },
+    {
+      "source": "pose/scannetpp/scene_19",
+      "sample": "sample_00019",
+      "rotation_error": 1.804718342546252e-07,
+      "center_error": 0.0002792041451714772,
+      "scale": 0.05855801438613854
+    },
+    {
+      "source": "pose/scannetpp/scene_2",
+      "sample": "sample_00002",
+      "rotation_error": 6.521820428151415e-07,
+      "center_error": 5.804050921212611e-05,
+      "scale": 0.07151244085925473
+    },
+    {
+      "source": "pose/scannetpp/scene_20",
+      "sample": "sample_00020",
+      "rotation_error": 4.2471825389966966e-07,
+      "center_error": 0.00013023025369646168,
+      "scale": 0.039945739534520776
+    },
+    {
+      "source": "pose/scannetpp/scene_21",
+      "sample": "sample_00021",
+      "rotation_error": 2.9898144204842936e-07,
+      "center_error": 9.530344139535574e-05,
+      "scale": 0.04129750355483684
+    },
+    {
+      "source": "pose/scannetpp/scene_22",
+      "sample": "sample_00022",
+      "rotation_error": 3.6015089643903764e-07,
+      "center_error": 0.00015926486345041457,
+      "scale": 0.1262789442029691
+    },
+    {
+      "source": "pose/scannetpp/scene_23",
+      "sample": "sample_00023",
+      "rotation_error": 2.8369785409765313e-07,
+      "center_error": 0.0005677100211527453,
+      "scale": 0.143111918408587
+    },
+    {
+      "source": "pose/scannetpp/scene_24",
+      "sample": "sample_00024",
+      "rotation_error": 6.116053178351066e-07,
+      "center_error": 6.5504527974658e-05,
+      "scale": 0.09244487820860124
+    },
+    {
+      "source": "pose/scannetpp/scene_25",
+      "sample": "sample_00025",
+      "rotation_error": 1.670232120387638e-07,
+      "center_error": 0.00023866113057757765,
+      "scale": 0.070748906755796
+    },
+    {
+      "source": "pose/scannetpp/scene_26",
+      "sample": "sample_00026",
+      "rotation_error": 2.7429718632565603e-07,
+      "center_error": 0.00036214054715782984,
+      "scale": 0.06768704660229255
+    },
+    {
+      "source": "pose/scannetpp/scene_27",
+      "sample": "sample_00027",
+      "rotation_error": 1.9985684696077755e-07,
+      "center_error": 8.887185895961602e-05,
+      "scale": 0.06365858741927831
+    },
+    {
+      "source": "pose/scannetpp/scene_28",
+      "sample": "sample_00028",
+      "rotation_error": 4.2101689545770427e-07,
+      "center_error": 0.00023970973758702385,
+      "scale": 0.07236275780798172
+    },
+    {
+      "source": "pose/scannetpp/scene_29",
+      "sample": "sample_00029",
+      "rotation_error": 1.4798533104487532e-07,
+      "center_error": 9.46762492018971e-05,
+      "scale": 0.07890394216796334
+    },
+    {
+      "source": "pose/scannetpp/scene_3",
+      "sample": "sample_00003",
+      "rotation_error": 8.383944026801871e-07,
+      "center_error": 0.00045357964945202944,
+      "scale": 0.10507448199977831
+    },
+    {
+      "source": "pose/scannetpp/scene_30",
+      "sample": "sample_00030",
+      "rotation_error": 4.1718646637267653e-07,
+      "center_error": 0.00013137679865893315,
+      "scale": 0.03708307009320388
+    },
+    {
+      "source": "pose/scannetpp/scene_31",
+      "sample": "sample_00031",
+      "rotation_error": 1.4400936287906063e-07,
+      "center_error": 0.00016756515744292821,
+      "scale": 0.030860736004113737
+    },
+    {
+      "source": "pose/scannetpp/scene_32",
+      "sample": "sample_00032",
+      "rotation_error": 2.3249805691794023e-07,
+      "center_error": 0.0006264571676531938,
+      "scale": 0.078925892527008
+    },
+    {
+      "source": "pose/scannetpp/scene_33",
+      "sample": "sample_00033",
+      "rotation_error": 4.7619232379503273e-07,
+      "center_error": 0.0001408319379789802,
+      "scale": 0.05578896382857099
+    },
+    {
+      "source": "pose/scannetpp/scene_34",
+      "sample": "sample_00034",
+      "rotation_error": 1.9123832006862074e-07,
+      "center_error": 0.00015480750240741414,
+      "scale": 0.03915669637890425
+    },
+    {
+      "source": "pose/scannetpp/scene_35",
+      "sample": "sample_00035",
+      "rotation_error": 1.7575900734811967e-07,
+      "center_error": 0.00015853215709626944,
+      "scale": 0.046781433038450636
+    },
+    {
+      "source": "pose/scannetpp/scene_36",
+      "sample": "sample_00036",
+      "rotation_error": 3.0152754504353396e-07,
+      "center_error": 9.678513652289222e-05,
+      "scale": 0.04413624441328274
+    },
+    {
+      "source": "pose/scannetpp/scene_37",
+      "sample": "sample_00037",
+      "rotation_error": 2.949211047598155e-07,
+      "center_error": 0.00029584678137882514,
+      "scale": 0.10213753024331115
+    },
+    {
+      "source": "pose/scannetpp/scene_38",
+      "sample": "sample_00038",
+      "rotation_error": 3.0015445662279205e-07,
+      "center_error": 0.00023078906943003671,
+      "scale": 0.07838534198421004
+    },
+    {
+      "source": "pose/scannetpp/scene_39",
+      "sample": "sample_00039",
+      "rotation_error": 4.2345923390030293e-07,
+      "center_error": 0.00023409515364702926,
+      "scale": 0.04018061500623932
+    },
+    {
+      "source": "pose/scannetpp/scene_4",
+      "sample": "sample_00004",
+      "rotation_error": 6.649562771521289e-07,
+      "center_error": 0.0009639683930191545,
+      "scale": 0.14609469793577168
+    },
+    {
+      "source": "pose/scannetpp/scene_40",
+      "sample": "sample_00040",
+      "rotation_error": 2.384185791015625e-07,
+      "center_error": 0.00013647344127223904,
+      "scale": 0.06366002087290357
+    },
+    {
+      "source": "pose/scannetpp/scene_41",
+      "sample": "sample_00041",
+      "rotation_error": 5.360889446803796e-07,
+      "center_error": 0.0001999596166653017,
+      "scale": 0.049844937332399065
+    },
+    {
+      "source": "pose/scannetpp/scene_42",
+      "sample": "sample_00042",
+      "rotation_error": 1.1987478254482653e-07,
+      "center_error": 0.00025198705837436997,
+      "scale": 0.10895342196888612
+    },
+    {
+      "source": "pose/scannetpp/scene_43",
+      "sample": "sample_00043",
+      "rotation_error": 5.389542506728517e-07,
+      "center_error": 0.0001558746302113695,
+      "scale": 0.0785213977140462
+    },
+    {
+      "source": "pose/scannetpp/scene_44",
+      "sample": "sample_00044",
+      "rotation_error": 2.0953092849662625e-07,
+      "center_error": 8.33552964148998e-05,
+      "scale": 0.08087257419224643
+    },
+    {
+      "source": "pose/scannetpp/scene_45",
+      "sample": "sample_00045",
+      "rotation_error": 5.167990831944635e-07,
+      "center_error": 0.0003260485376938571,
+      "scale": 0.06823179786150266
+    },
+    {
+      "source": "pose/scannetpp/scene_46",
+      "sample": "sample_00046",
+      "rotation_error": 3.7278598807866103e-07,
+      "center_error": 0.00017152625893346318,
+      "scale": 0.11581017525783054
+    },
+    {
+      "source": "pose/scannetpp/scene_47",
+      "sample": "sample_00047",
+      "rotation_error": 3.121627990543274e-07,
+      "center_error": 0.00017256563096040844,
+      "scale": 0.03069466413147114
+    },
+    {
+      "source": "pose/scannetpp/scene_5",
+      "sample": "sample_00005",
+      "rotation_error": 2.3924974434930135e-07,
+      "center_error": 0.0006320404047670536,
+      "scale": 0.09262588011889746
+    },
+    {
+      "source": "pose/scannetpp/scene_6",
+      "sample": "sample_00006",
+      "rotation_error": 3.615243288068726e-07,
+      "center_error": 0.00016691169222700017,
+      "scale": 0.0276876779078866
+    },
+    {
+      "source": "pose/scannetpp/scene_7",
+      "sample": "sample_00007",
+      "rotation_error": 3.584976617787561e-07,
+      "center_error": 7.58081542211464e-05,
+      "scale": 0.07285341567240125
+    },
+    {
+      "source": "pose/scannetpp/scene_8",
+      "sample": "sample_00008",
+      "rotation_error": 5.957704914960615e-07,
+      "center_error": 0.00015494232331808577,
+      "scale": 0.03188858699690494
+    },
+    {
+      "source": "pose/scannetpp/scene_9",
+      "sample": "sample_00009",
+      "rotation_error": 1.3502527440589773e-07,
+      "center_error": 0.00016350455096322825,
+      "scale": 0.07619158201255645
+    }
+  ],
+  "depth_frame_packing": "Predicted depth, reference depth, then optional matching RGB in one decoded frame. Verified recovered RGB is retimed by frame index to the depth render rate."
+}

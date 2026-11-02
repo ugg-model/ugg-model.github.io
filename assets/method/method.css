@@ -1,0 +1,100 @@
+/* UGG method figure - faithful HTML/CSS reproduction of the paper figure.
+   Authored at a fixed 1280x560 design grid and scaled with transform so the
+   proportions stay identical at every viewport width. */
+.uggfig{--blue:#e7ecf2;--blue-b:#869dbe;--yel:#f8f1d7;--yel-b:#e0bd4a;
+  --pink:#f4e9ed;--pink-b:#c794a6;--pur:#e9e7f0;--pur-b:#9786bc;
+  --gry:#f1f1f1;--gry-b:#7e7e7e;--ink:#141414;--line:#7f8081;
+  width:85%;margin-inline:auto;overflow:hidden;background:#fff;border-radius:8px}
+@media(max-width:900px){.uggfig{width:100%}}
+.uggfig-stage{width:1266px;height:554px;position:relative;transform-origin:top left;
+  font:400 22px/1.25 "Latin Modern Roman","CMU Serif","Nimbus Roman","Liberation Serif","Times New Roman",Times,serif;
+  color:var(--ink);text-align:left}
+.uggfig-stage *{box-sizing:border-box}
+
+/* ---- column headings ---- */
+.ug-h{position:absolute;top:6px;font-size:25px;letter-spacing:.005em}
+
+/* ---- left: observation ---- */
+.ug-obs{position:absolute;left:0;top:62px;width:252px}
+.ug-src{position:relative;margin-bottom:15px;display:flex;align-items:center;height:124px}
+.ug-src:last-child{height:42px;margin-bottom:0}
+.ug-box{width:152px;border:1.6px dashed var(--bb);border-radius:4px;padding:4px 4px 5px;
+  background:#fff;text-align:center}
+.ug-box .cap{font-size:18px;display:block;margin-bottom:3px;line-height:1.1}
+.ug-box img{display:block;width:100%;height:88px;object-fit:cover;border-radius:2px}
+.ug-box.sm{height:46px;display:flex;align-items:center;justify-content:center}
+.ug-box.sm .cap{margin:0}
+/* encoder / decoder trapezoids */
+.ug-tz{width:34px;height:76px;margin-left:10px;background:var(--bg);border:1.6px solid var(--bb)}
+.ug-enc{clip-path:polygon(0 0,100% 20%,100% 80%,0 100%)}
+.ug-dec{clip-path:polygon(0 20%,100% 0,100% 100%,0 80%)}
+.ug-tz.sm{height:40px}
+/* token stacks */
+.ug-stack{margin-left:10px;display:flex;flex-direction:column;gap:6px}
+.tk{width:35px;height:35px;border:2px solid var(--gry-b);background:var(--gry);border-radius:3px;
+  display:block}
+.tk.b{border-color:var(--blue-b);background:var(--blue)}
+.tk.y{border-color:var(--yel-b);background:var(--yel)}
+.tk.p{border-color:var(--pink-b);background:var(--pink)}
+.tk.v{border-color:var(--pur-b);background:var(--pur)}
+.tk.n{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.95) 0 3px,transparent 3px 6.5px)}
+
+/* ---- centre: the model ---- */
+.ug-net{position:absolute;left:259px;top:66px;width:524px;height:410px;
+  border:2px solid var(--line);border-radius:12px;background:#fff}
+.ug-L{position:absolute;left:0;right:76px;top:10px;text-align:center;font-size:23px}
+.ug-rowtok{position:absolute;left:14px;right:78px;display:flex;align-items:center;gap:10px}
+.ug-rowtok .gap{width:16px;text-align:center;font-size:21px;letter-spacing:1px}
+.ug-rowtok .sp{flex:1}
+.ug-pill{border:2px solid var(--bb);background:var(--bg);border-radius:9px;height:42px;
+  display:flex;align-items:center;justify-content:center;font-size:23px}
+.ug-three{position:absolute;left:14px;right:78px;display:flex;gap:9px}
+.ug-three .ug-pill{flex:1}
+.ug-wide{position:absolute;left:14px;right:78px}
+.ug-att{height:84px;flex-direction:column;gap:2px;line-height:1.15;
+  border-color:#807f7f;
+  background:linear-gradient(90deg,#e7ecf1 0%,#eceeea 22%,#f5f0db 52%,#f6eee1 74%,#f4e9ed 100%)}
+.ug-pill.h46{height:46px}
+.ug-pill.h47{height:47px}
+.ug-att b{font-weight:400;font-size:23px}
+.ug-att i{font-style:normal;font-size:18px}
+/* right rail: t + mod */
+.ug-rail{position:absolute;right:16px;top:14px;width:52px;height:396px}
+.ug-rail .wire{position:absolute;left:25px;top:34px;bottom:52px;width:2px;background:var(--line)}
+.ug-chip{position:absolute;left:0;width:52px;height:34px;border:2px solid var(--line);
+  border-radius:7px;background:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:20px}
+.ug-chip.t{height:32px;font-style:italic;font-size:22px}
+
+/* ---- right: outputs ---- */
+.ug-out{position:absolute;left:800px;top:62px;width:480px}
+.ug-orow{display:flex;align-items:center;margin-bottom:15px;height:124px}
+.ug-opanel{flex:1;border:1.8px solid var(--bb);background:var(--bg);border-radius:5px;padding:5px;
+  text-align:center}
+.ug-opanel .cap{font-size:18px;display:block;margin-bottom:3px;line-height:1.1}
+.ug-strip{display:flex;gap:4px}
+.ug-strip img{width:33.333%;height:84px;object-fit:cover;display:block;border-radius:1px}
+
+/* ---- legend ---- */
+.ug-legend{position:absolute;left:259px;right:0;bottom:22px;height:52px;border:2px solid var(--line);
+  border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;
+  gap:15px;font-size:19px;padding:0 12px}
+.ug-legend span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.ug-legend .tk{width:27px;height:27px}
+.ug-legend .chip{width:36px;height:29px;border:1.6px solid var(--line);border-radius:5px;
+  display:inline-flex;align-items:center;justify-content:center;font-style:italic;font-size:18px}
+
+@media (prefers-color-scheme:dark){
+  .uggfig-stage{color:#141414}
+}
+
+/* ray-map images sit in front of an offset grey plane (a separate shape in the figure) */
+.rayimg{position:relative;display:block;padding:0 8px 8px 0}
+.rayimg::before{content:"";position:absolute;left:8px;top:8px;right:0;bottom:0;
+  background:#8d8d8d;border-radius:1px}
+.rayimg img{position:relative;z-index:1;display:block;width:100%}
+.ug-strip .rayimg{width:33.333%}
+
+/* every panel is the same height in the reference figure */
+.ug-src .ug-box img,.ug-src .ug-box .rayimg img{height:85px}
+.ug-orow .ug-strip img,.ug-orow .ug-strip .rayimg img{height:84px}

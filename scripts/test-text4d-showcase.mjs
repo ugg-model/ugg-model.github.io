@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import {readFile} from "node:fs/promises";
+import {applyText4DShowcase,TEXT4D_WEBSITE_NUMBERS,TEXT4D_SHOWCASE_IDS} from "../assets/text4d-showcase.mjs";
+const manifest=JSON.parse(await readFile(new URL("../examples.json",import.meta.url),"utf8"));
+const before=JSON.stringify(manifest), selected=applyText4DShowcase(manifest);
+assert.deepEqual(TEXT4D_WEBSITE_NUMBERS,[22,24,30,31,33,36,37,38,39,40,43,46,47,48,49,50,52,53,56,57,58,60,65,66]);
+assert.deepEqual(TEXT4D_SHOWCASE_IDS,TEXT4D_WEBSITE_NUMBERS.map(n=>"text4d-indoor-"+String(n-22).padStart(3,"0")));
+assert.deepEqual(selected.generation.cases.map(item=>item.id),TEXT4D_SHOWCASE_IDS);
+assert.equal(selected.generation.cases.length,24);
+assert.ok(selected.generation.cases[0].prompt.startsWith("This interior kitchen and dining space features light-colored tiled floors, wooden cabinetry, and dark green walls"));
+assert.equal(JSON.stringify(manifest),before);
+assert.throws(()=>applyText4DShowcase({...manifest,generation:{cases:[]}}),/missing/);
+console.log("PASS: exact 24 indoor choices/order, former website-number mapping, kitchen prompt, immutable manifest");

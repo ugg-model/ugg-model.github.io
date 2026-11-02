@@ -1,0 +1,39 @@
+{
+  "frame_count": 50,
+  "fps": 6.0,
+  "rgb_source": "rescued evaluation/depthpose/scannetpp/sample_00001/gt_rgb.mp4",
+  "frame_correspondence": "Verified all-frame relative GT rotations and normalized camera centers; depth and camera GT poses identical.",
+  "depth_clock": "Depth and input RGB packed into a single video frame for synchronized canvas rendering.",
+  "camera_alignment": {
+    "type": "One global Sim(3), fitted to all corresponding camera centers.",
+    "scale": 0.020301542476160516,
+    "rotation": [
+      [
+        0.9661701570438954,
+        -0.006866741111122647,
+        -0.25781403279163756
+      ],
+      [
+        -0.0317148679594537,
+        0.9888951162362004,
+        -0.14519165346019855
+      ],
+      [
+        0.25594803142061723,
+        0.1484563806331838,
+        0.9552231719662196
+      ]
+    ],
+    "translation": [
+      0.01640936546793742,
+      0.022389179497915246,
+      -0.0387563973861204
+    ]
+  },
+  "frustum_display": "Fixed-size orientation glyphs, not calibrated field-of-view visualization.",
+  "curated_sources": {
+    "depth": "depth/scannetpp__dense/scene_1",
+    "camera": "pose/scannetpp__dense/scene_1"
+  },
+  "selection": "Provisional ground-truth oracle-selected examples."
+}
