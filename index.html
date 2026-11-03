@@ -41,6 +41,10 @@
   <p class="tldr"><span class="k">TL;DR</span>A single model jointly generates <b>RGB video, depth, and camera geometry</b>, turning visual generation and geometric prediction into conditional completion of the same 4D scene.</p>
 </div></header>
 <main id="main">
+<section class="hero-teaser" aria-label="Teaser"><div class="wrap">
+  <video class="teaser-video" src="assets/teaser.mp4" autoplay muted loop playsinline controls preload="metadata" aria-label="UGG teaser video"></video>
+  <p class="hero-caption">Condition on partial observations. Complete the scene in <b>RGB, depth, and camera geometry</b>.</p>
+</div></section>
 <section id="abstract"><div class="wrap">
   <h2>Abstract</h2>
   <p class="prose measure">Understanding 4D scenes is a core challenge in visual intelligence, requiring models to jointly capture scene geometry, appearance, and dynamics from partial observations. Existing approaches, however, are subdivided into feedforward models that are used for direct geometric prediction and generative models for visual synthesis. We propose a unified generative-predictive framework for 4D scene understanding that jointly models RGB video and geometric representations such as depth and camera pose with a single joint generative model. Our generative formulation enables us to learn from diverse, heterogeneous datasets with different subsets of geometric and visual annotations, and enables us to condition on arbitrary subsets of inputs, allowing a single model to perform cross-modal generation, geometric prediction, and future scene inference from partial observations. In addition, our generative approach enables test-time search over multiple candidate scene completions, improving geometric prediction from sparse observations. Overall, we illustrate the efficacy of our generative-predictive framework on a suite of generation and prediction tasks.</p>
