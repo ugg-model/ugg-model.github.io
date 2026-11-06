@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import {OrbitControls} from "./vendor/OrbitControls.js";
 import {createCameraViewer} from "./camera-viewer.js";
-import {firstFrameCamera, inverse3, unpackPointmaps, writePointmap} from "./text4d-geometry.js?view=first-frame-40";
+import {firstFrameCamera, inverse3, unpackPointmaps, writePointmap} from "./text4d-geometry.js?view=first-frame-40&depth=f16";
 
 function element(tag, className, text) {
   const node = document.createElement(tag);

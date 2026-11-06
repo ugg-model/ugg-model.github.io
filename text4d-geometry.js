@@ -23,8 +23,24 @@ export function firstFrameCamera(info, data) {
   };
 }
 
+// IEEE half -> float, exact for every finite/zero/subnormal half.
+function halfToFloat(h) {
+  const s = (h & 0x8000) ? -1 : 1, e = (h >> 10) & 0x1f, f = h & 0x3ff;
+  if (e === 0) return s * f * 5.960464477539063e-8;            // 2^-24
+  if (e === 31) return f ? NaN : s * Infinity;
+  return s * (1 + f / 1024) * Math.pow(2, e - 15);
+}
+
 export function unpackPointmaps(buffer, info) {
   const samples = info.frame_count * info.grid_width * info.grid_height;
+  if (info.depth_dtype === "float16") {
+    // Published payloads store depth as little-endian float16 (half the bytes; <0.05% error).
+    if (buffer.byteLength !== samples * 5) throw new Error("Pointmap payload size mismatch");
+    const half = new Uint16Array(buffer, 0, samples), table = new Float32Array(65536), depth = new Float32Array(samples);
+    for (let i = 0; i < 65536; i++) table[i] = halfToFloat(i);
+    for (let i = 0; i < samples; i++) depth[i] = table[half[i]];
+    return {depth, colors: new Uint8Array(buffer, samples * 2, samples * 3)};
+  }
   if (buffer.byteLength !== samples * 7) throw new Error("Pointmap payload size mismatch");
   return {depth: new Float32Array(buffer, 0, samples), colors: new Uint8Array(buffer, samples * 4, samples * 3)};
 }

@@ -1,6 +1,6 @@
 "use strict";
 // Cache-busting token, stamped by tools/bump_asset_version.py.
-const ASSET_VERSION = "20261027-1706";
+const ASSET_VERSION = "20261106-f16";
 function element(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
